@@ -4,26 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <title>loginformulier</title>
-    <link rel="stylesheet" href="styles/styleinlogform.css">
+    <!--<link rel="stylesheet" href="styles/style.css">-->
 </head>
 
 <body>
 
     <header>
        <img src="images/transavialogo.svg" alt="transavialogo">
-        <h1>inloggen met transavia</h1>
+        <h1>Meld je aan voor Mijn Transavia</h1>
     </header>
 
     <main>
    
    <form>
     
-   <label> Emailadres <input type="email" placeholder="gebruiker@email.com" required> </label>
-   <label> Wachtwoord <input type="text" required> </label> 
+  
+   
+   </form>
+   
+   <form> 
+   <fieldset> <legend>Je gegevens</legend> <label> Naam <input type="email" placeholder="voor-en achternaam" required> </label> 
+   <label> Geboortedatum <input type="date" required> </label></fieldset> 
+   
+   <fieldset> <legend>Je accountgegevens</legend>  <label> Emailadres <input type="email" placeholder="gebruiker@email.com" required> </label>
+   <label> Wachtwoord <input type="password" required> </label> </fieldset> 
+   
+   <input type="submit" value="Registreren">
    
    </form>
     
-    <h4>Nog geen account?<a href="aanmelden.html"> Meld je nu aan!</a></h4>
+    <h4>Al een account?<a href="inlogformulier.html"> Log in!</a></h4>
 
     </main>
 

@@ -88,28 +88,9 @@ header {
     background-image: url(../images/vliegtuiguitzicht2.png);
     background-position: center;
     background-size: cover;
-    position: relative;  
-}
-
-/* source: http://jsbin.com/yeril/2/edit?html,css,output */
-header:before,
-header:after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 50%;
-  border-bottom: 2rem solid white; 
-}
-
-header:before {
-  left: 0;
-  border-right: 3rem solid transparent;
-}
-
-header:after {
-  right: 0;
-  border-left: 3rem solid transparent;
+-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 75% 93%, 50% 100%, 25% 93%, 0 93%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 75% 93%, 50% 100%, 25% 93%, 0 93%);
+    
 }
 
 header img{
