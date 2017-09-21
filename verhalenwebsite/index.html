@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Overzichtspagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -11,84 +12,132 @@
 
     <header>
         <img src="images/transavialogo.svg" alt="transavialogo">
-        <img src="images/search.svg" alt="searchicon">
+        <img src="images/menuicongreen.svg" alt="menuicon">
+        <nav>
+            <a href="account.hmtl">Account</a>
+            <a href="leesbundels.html">Leesbundels</a>
+        </nav>
         <h1>Verhalen met stijl</h1>
-        <h2>Lees verder...</h2>
-        <a href="99verrassing.html"><h3>99 - verassing</h3></a>
+        <form action="zoekverhaal">
+            <input type="text" placeholder="Zoek uw verhaal">
+        </form>
+        <div></div>
     </header>
 
+    <section>
+        <h2>lees verder...</h2>
+        <a href="99verrassing.html">
+            <h3>Vrijdag de 13e</h3>
+        </a>
+        <svg></svg>
+    </section>
+
     <main>
-    <h2>Stijlvolle verhalen</h2>
-<img src="images/zoekopties.svg" alt="zoekoptiesicon">
-        <h4>zoek opties</h4>
+        <h2>Wat wil je lezen?</h2>
+        <img src="images/sorfilter.svg" alt="zoekoptiesicon">
+        <a href="#">zoek opties</a>
+
+        <form action="filterandsort">
+            <fieldset>
+                <legend>Sorteer op</legend>
+                <label> Comments <input type="radio"> </label>
+                <label> Likes <input type="radio"> </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Leestijd</legend>
+                <label> 5 min <input type="checkbox"> </label>
+                <label> 10 min <input type="checkbox"> </label>
+                <label> 15 + min <input type="checkbox"> </label>
+            </fieldset>
+            <fieldset>
+                <legend>Leesstijl</legend>
+                <label> Eerste persoon <input type="checkbox"> </label>
+                <label> Derde persoon <input type="checkbox"> </label>
+                <label> Beeldend <input type="checkbox"> </label>
+            </fieldset>
+            <fieldset>
+                <legend>Overig</legend>
+                <label> Sport <input type="checkbox"> </label>
+                <label> Bekende namen <input type="checkbox"> </label>
+                <label> Stemming <input type="checkbox"> </label>
+            </fieldset>
+            <button>Zoeken</button>
+        </form>
 
         <article>
-           <a href="99verrassing.html"><h3>99 - verrassing</h3></a>
-           <h5>12 juni 2016</h5>
-           <p>- ‘Biertje dan maar?’ – ‘Graag.’ – ‘Vermoeiende dag?’ – ‘Nah. Naar de bilbiotheek geweest. Met de bus.’[…]</p>
-           <img src="images/like.svg" alt="likesicon">
-            <h6>28 likes</h6>
-            <img src="images/comment.svg" alt="commentsicon">
-            <h6>24 comments</h6>
+            <a href="99verrassing.html">
+                <h3>99. Verrassing</h3>
+            </a>
+            <footer>
+                <ul>
+                    <li>24</li>
+                    <li>28</li>
+                    <li>5m</li>
+                </ul>
+            </footer>
+            <button>mijn lijst</button>
+            <button>download</button>
         </article>
-        
+
         <article>
-           <a href=""><h3>87 - code</h3></a>
-           <h5>10 juni 2016</h5>
-           <p>Kraak de code en win een romantisch etentje met de verwarde man. In kwellende situaties toveren apen […]</p>
-           <img src="images/like.svg" alt="likesicon">
-            <h6>14 likes</h6>
-            <img src="images/comment.svg" alt="commentsicon">
-            <h6>15 comments</h6>
+            <a href="99verrassing.html">
+                <h3>98. Beroemd</h3>
+            </a>
+            <footer>
+                <ul>
+                    <li>24</li>
+                    <li>28</li>
+                    <li>5m</li>
+                </ul>
+            </footer>
+            <button>mijn lijst</button>
+            <button>download</button>
         </article>
-        
+
         <article>
-           <a href=""><h3>59 - terugspoelen</h3></a>
-           <h5>29 juni 2016</h5>
-           In een babywinkel op het Bos en Lommerplein koop ik babyschoentjes. Teleurgesteld verlaat ik de […]
-           <img src="images/like.svg" alt="likesicon">
-            <h6>30 likes</h6>
-            <img src="images/comment.svg" alt="commentsicon">
-            <h6>2 comments</h6>
+            <a href="99verrassing.html">
+                <h3>97. Freudiaans</h3>
+            </a>
+            <footer>
+                <ul>
+                    <li>24</li>
+                    <li>28</li>
+                    <li>5m</li>
+                </ul>
+            </footer>
+            <button>mijn lijst</button>
+            <button>download</button>
         </article>
-        
+
         <article>
-           <a href=""><h3>50 - gefrusteerd</h3></a>
-           <h5>19 juni 2016</h5>
-           k stap uit die godverdomde stinkbus. De mensen krioelen als mieren over het […]
-           <img src="images/like.svg" alt="likesicon">
-            <h6>18 likes</h6>
-            <img src="images/comment.svg" alt="commentsicon">
-            <h6>26 comments</h6>
+            <a href="99verrassing.html">
+                <h3>96. Steenkolenfrans</h3>
+            </a>
+            <footer>
+                <ul>
+                    <li>24</li>
+                    <li>28</li>
+                    <li>5m</li>
+                </ul>
+            </footer>
+            <button>mijn lijst</button>
+            <button>download</button>
         </article>
-        
-        <a href="verhalenlijst.html">zie meer verhalen</a>
+
+        <a href="#">Zie meer verhalen</a>
 
     </main>
-    
+
     <section>
-        
+
         <h2>Je vlucht vertrekt over 01:40</h2>
         <p>Dit kun je allemaal lezen voor dat je vlucht vertrekt</p>
         <button>Bekijk verhalen voor nu</button>
-        
+
     </section>
-    
-    <section>
-        
-         <h2>Lees bundels</h2>
-        <p>Stijvolle verhalen met een thema.</p>
-        
-        <section>
-            <h3>Bekende namen</h3>
-            <p>Van Lange Frans tot Johan Cruijff</p>
-              <img src="images/like.svg" alt="likesicon">
-            <h6>18 likes</h6>
-            <img src="images/comment.svg" alt="commentsicon">
-            <h6>26 comments</h6>
-        </section>
-        
-    </section>
+
+    <script src="js/menu.js"></script>
 
 </body>
 
