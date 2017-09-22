@@ -76,10 +76,12 @@ h3 {
 }
 
 p, form, ul {
+    font-size: 1em;
     font-family: "NexaRegular"; 
 }
 
 a {
+    font-family: "Nexa-XBold";
     text-decoration: none;
 }
 
@@ -87,6 +89,8 @@ header {
     height: 50vh; 
     width: 100vw;
     background-color: white;
+    position: relative;
+    z-index: 1;
 }
 
 header img{
@@ -154,6 +158,23 @@ header div {
     border: none;
 }
 
+header::before{
+    content: '';
+	position: absolute;
+	background-color: white;
+    width:  10em;
+	height: 10em;
+    transform: rotate(45deg);
+    border-bottom-right-radius: 1rem;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    bottom: -2rem;
+    z-index: -1;
+}
+
+
 body section:first-of-type {
     background-image: url(../images/vliegtuiguitzicht2.png);
     background-position: center;
@@ -174,7 +195,7 @@ body section:first-of-type h3{
     color: #00D66C;
 }
 
-body section:first-of-type svg{
+body section:first-of-type div{
     left: 0;
     width: 40%;
 	height: 0.7rem;
@@ -194,21 +215,19 @@ main {
 main h2 {
     color: #2800A0;
     margin-left: 2rem;
+    margin-bottom: 1rem;
 }
 
-main img{ 
-     width: 2rem;
-}
-
-main h4 {
-    margin-left: 0.5rem;
-    display: inline-block;
+main > a:nth-of-type(1){ 
+    color: #606060;
+    background: url(../images/sorfilter.svg) no-repeat left;
+    background-size: 2rem;
+    padding: 1rem 1rem 1rem 2.5rem;
+    
 }
 
 form[action="filterandsort"] {
-    width: 17rem;
     padding: 2rem 2rem 1.5rem 2rem;
-    margin-top: 1rem;
     border-radius: 2rem;
     background-color: rgba(255, 255, 255, 0.75);
     background-image: linear-gradient(
@@ -244,18 +263,38 @@ form[action="filterandsort"] button {
 }
 
 main article {
-    padding: 2rem 2rem 1.5rem 2rem;
+    position: relative;
     margin-top: 1rem;
     border-radius: 2rem;
     color: white;
-    background-color: #00D66C;
     background-image: linear-gradient(
     to top,
-    rgba(255, 255, 255, 1) 1rem,
-    rgba(255, 255, 255, 1) 3.5rem,
-    rgba(255, 255, 255, 0) 3.5rem,
-    rgba(255, 255, 255, 0) 3.5rem);
+    rgba(255, 255, 255, 1) 1em,
+    rgba(255, 255, 255, 1) 3.5em,
+    rgba(255, 255, 255, 0) 3.5em);
     flex-grow: 1;
+    z-index: 1;
+}
+
+main article::before{
+   position: absolute;
+  content: '';
+    bottom: 3rem;
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+}
+
+main article h3 {
+    border-radius: 2rem 2rem 0rem 0rem;
+    padding: 2rem 2rem 0rem 2rem;
+    background-color: #00D66C;
+}
+
+main article footer {
+    padding: 0rem 2rem 0rem 2rem;
+    background-color: #00D66C;
 }
 
 article a {
@@ -289,23 +328,16 @@ article li:nth-last-of-type(1) {
     color: white;
 }
 
-article button:first-of-type {
-    width: 6rem;
-    font-family: "NexaRegular"; 
-    font-size: 0.8rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: white;
-    padding: 2.5rem 0.5rem 0.5rem 0.5rem;
-    background-color: #2800A0;
-    background-image: url(../images/toevoegenaanlijst.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 25%;
-    background-size: 1.5rem;
+article p {
+    display: block;
+    color: #202020;
+   padding: 1rem 2rem 1rem 2rem;
+    background-color:  rgba(255, 255, 255, 0.75);
 }
 
 article button {
     width: 6rem;
+    height: 4rem;
     font-family: "NexaRegular"; 
     font-size: 0.8rem;
     border: none;
@@ -317,6 +349,12 @@ article button {
     background-repeat: no-repeat;
     background-position: 50% 25%;
     background-size: 1.5rem;
+}
+
+article button:first-of-type {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: url(../images/toevoegenaanlijst.svg);
 }
 
 section button {
