@@ -80,7 +80,7 @@ p, form, ul {
     font-family: "NexaRegular"; 
 }
 
-a {
+a, button {
     font-family: "Nexa-XBold";
     text-decoration: none;
 }
@@ -94,7 +94,7 @@ header {
 }
 
 header img{
-    width: 2rem;
+    width: 3rem;
     margin-top: 1rem;
 }
 
@@ -102,14 +102,25 @@ header img:nth-of-type(1){
     margin-left: 1rem;
 }
 
-header img:nth-of-type(2){
-    float: right;
-    margin-right: 1rem;
+header nav {
+    position: absolute;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+nav a {
+    color: #00D66C;
+    padding-left: 1rem;
 }
 
 header h1 {
-    margin-left: 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    background-image: url(../images/homeshape.svg);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    padding-left: 4rem;
 }
 
 header input[type="text"] {
@@ -124,8 +135,7 @@ header input[type="text"] {
     background-position: 1rem;
     border-radius: 3rem;
     border: none;
-    margin-left: 3rem;
-    margin-top: 1rem;
+    margin-left: 5rem;
 }
 
 header ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -139,23 +149,6 @@ header :-ms-input-placeholder { /* IE 10+ */
 }
 header :-moz-placeholder { /* Firefox 18- */
   color: white;
-}
-
-header div {
-    float: right;
-    margin-top: -7rem;
-    margin-right: 3rem;
-    font-family: "Nexa-XBold";
-    height: 7rem;
-    width: 3rem;
-    padding: 1rem;
-    background-color: #FF2E6A;
-    background-image: url(../images/homeicon.svg);
-    background-repeat: no-repeat;
-    background-size: 1.5rem;
-    background-position: center;
-    border-radius: 3rem;
-    border: none;
 }
 
 header::before{
@@ -215,20 +208,19 @@ main {
 main h2 {
     color: #2800A0;
     margin-left: 2rem;
-    margin-bottom: 1rem;
 }
 
-main > a:nth-of-type(1){ 
+main > button{ 
     color: #606060;
     background: url(../images/sorfilter.svg) no-repeat left;
-    background-size: 2rem;
-    padding: 1rem 1rem 1rem 2.5rem;
-    
+    background-size: 2.5rem;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1rem;
+    border: none;
 }
 
 form[action="filterandsort"] {
-    padding: 2rem 2rem 1.5rem 2rem;
-    border-radius: 2rem;
+    border-radius: .75rem;
     background-color: rgba(255, 255, 255, 0.75);
     background-image: linear-gradient(
     to top,
@@ -238,34 +230,50 @@ form[action="filterandsort"] {
     rgba(255, 255, 255, 0) 3.5rem);
 }
 
+form[action="filterandsort"] h3 {
+    border-radius: .75rem .75rem 0rem 0rem;
+    padding: 2rem 0rem 1rem 0rem;
+    background-color: white;
+    color: #00D66C;
+}
+
 form[action="filterandsort"] legend {
     font-family: "Nexa-XBold";
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    padding-top: 1rem;
 }
 
 form[action="filterandsort"] label {
     display: block;
 }
 
+form[action="filterandsort"] h3, legend, label {
+    padding-left: 2rem;
+}
+
 form[action="filterandsort"] button {
     color: white;
-    font-family: "Nexa-Xbold";
     font-size: 1rem;
     border: none;
     background-color: #ff3268;
     box-shadow:inset 0 -0.1875em 0.0625em #ca2b55;
-    padding: .4375em 1.5em .5625em;
+    padding: 0.7rem 1.5rem 0.7rem 3rem;
     text-decoration: none;
-    border-radius: 1.25em;
-    min-height: 1.5rem;
-    min-width: 1.5rem;
+    border-radius: 3rem;
+    background-image: url(../images/searchiconwhite.svg);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 1rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 2.3rem;
 }
 
 main article {
     position: relative;
     margin-top: 1rem;
-    border-radius: 2rem;
+    border-radius: .75rem;
     color: white;
     background-image: linear-gradient(
     to top,
@@ -287,7 +295,7 @@ main article::before{
 }
 
 main article h3 {
-    border-radius: 2rem 2rem 0rem 0rem;
+    border-radius: .75rem .75rem 0rem 0rem;
     padding: 2rem 2rem 0rem 2rem;
     background-color: #00D66C;
 }
@@ -366,4 +374,18 @@ section button {
     border-radius: 1.25em;
     min-height: 1.5rem;
     min-width: 1.5rem;
+}
+
+section:nth-of-type(2){
+    background-color: #00D66C;
+    height: 50vh;
+}
+
+
+section:nth-of-type(2) h3{
+    padding: 8rem 2rem 2rem 11rem;
+    margin-left: 1rem;
+    color: white;
+    background: url(../images/flightwindow.svg) no-repeat left;
+    background-size: 10rem;
 }
