@@ -58,6 +58,10 @@ table {
 box-sizing: border-box;
 }
 
+html {
+        background-color: #F3E5D8;
+    }
+
 h1, h2, h3 {
   font-family: "Nexa-XBold";  
 }
@@ -91,6 +95,8 @@ header {
     background-color: white;
     position: relative;
     z-index: 1;
+    left: 50%;
+    margin-left: -50vw;
 }
 
 header img{
@@ -105,6 +111,10 @@ header img:nth-of-type(1){
 header nav {
     position: absolute;
     margin-top: 2rem;
+    display: inline-block;
+}
+
+header li {
     display: inline-block;
 }
 
@@ -168,27 +178,29 @@ header::before{
 }
 
 
-body section:first-of-type {
+body section:nth-of-type(-n+3) {
     background-image: url(../images/vliegtuiguitzicht2.png);
     background-position: center;
     background-size: cover;
     height: 50vh;
+    width: 100%;
     padding-left: 3rem;
+    position: relative;
 }
 
-body section:first-of-type h2{
+body section:nth-of-type(-n+3) h2{
     position: absolute;
     bottom: 5.3rem;
     color: white;
 }
 
-body section:first-of-type h3{
+body section:nth-of-type(-n+3) h3{
     position: absolute;
     bottom: 2.3rem;
     color: #00D66C;
 }
 
-body section:first-of-type div{
+body section:nth-of-type(-n+3) div{
     left: 0;
     width: 40%;
 	height: 0.7rem;
@@ -197,12 +209,17 @@ body section:first-of-type div{
     background-color: #00D66C;
 }
 
+body section:nth-of-type(2) {
+    display: none;
+}
+
+body section:nth-of-type(3) {
+    display: none;
+}
 
 main {
     padding: 3rem 1rem 3rem 1rem;
     background-color: #F3E5D8;
-    /* display: flex;
-    flex-wrap: wrap; */
 }
 
 main h2 {
@@ -228,6 +245,7 @@ form[action="filterandsort"] {
     rgba(255, 255, 255, 1) 3.5rem,
     rgba(255, 255, 255, 0) 3.5rem,
     rgba(255, 255, 255, 0) 3.5rem);
+    display: none;
 }
 
 form[action="filterandsort"] h3 {
@@ -280,18 +298,6 @@ main article {
     rgba(255, 255, 255, 1) 1em,
     rgba(255, 255, 255, 1) 3.5em,
     rgba(255, 255, 255, 0) 3.5em);
-    flex-grow: 1;
-    z-index: 1;
-}
-
-main article::before{
-   position: absolute;
-  content: '';
-    bottom: 3rem;
-    width: 100%;
-    height: 2.5rem;
-    background-color: rgba(255, 255, 255, 0.75);
-    z-index: -1;
 }
 
 main article h3 {
@@ -336,14 +342,23 @@ article li:nth-last-of-type(1) {
     color: white;
 }
 
-article p {
+/* article p {
     display: block;
-    color: #202020;
-   padding: 1rem 2rem 1rem 2rem;
-    background-color:  rgba(255, 255, 255, 0.75);
+    color: white;
+    padding: 3rem 2rem 3rem 2rem;
+    background: url(../images/vliegtuiguitzicht.png) no-repeat center;
+    background-size: 100%;
+} */
+
+article img {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
 }
 
 article button {
+    margin-top: -2rem;
     width: 6rem;
     height: 4rem;
     font-family: "NexaRegular"; 
@@ -376,16 +391,88 @@ section button {
     min-width: 1.5rem;
 }
 
-section:nth-of-type(2){
+aside{
     background-color: #00D66C;
     height: 50vh;
 }
 
 
-section:nth-of-type(2) h3{
+aside h3{
     padding: 8rem 2rem 2rem 11rem;
     margin-left: 1rem;
     color: white;
     background: url(../images/flightwindow.svg) no-repeat left;
     background-size: 10rem;
 }
+
+@media (min-width: 40em){
+    
+    body>div  {
+        display: flex;
+        justify-content: center;
+    }
+    
+    main section {
+        width: calc(50% - 0.5rem);
+    }
+    
+    body section:nth-of-type(1) {
+    display: block;
+        margin-left: 1rem;
+}
+    
+    body section:nth-of-type(2) {
+    display: block;
+        margin-right: 1rem;
+}
+    
+    main  {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    main article {
+        width: calc(50% - 0.5rem);
+    }
+    
+}
+
+@media (min-width: 60em){
+    
+    body, header>div {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    
+    body>div  {
+        display: flex;
+        justify-content: center;
+    }
+    
+    main section {
+        width: calc(33% - 0.5rem);
+    }
+    
+    body section:nth-of-type(2) {
+        margin-right: 0rem;
+}
+    
+    body section:nth-of-type(3) {
+    display: block;
+        margin-right: 1rem;
+}
+    
+    main  {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    main article {
+        width: calc(33% - 0.5rem);
+    }
+    
+}
+
+    
