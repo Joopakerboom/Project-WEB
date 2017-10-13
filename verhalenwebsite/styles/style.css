@@ -48,24 +48,21 @@ table {
 }
 
 @font-face {
-    font-family: "Nexa-XBold";
-    src: url(../fonts/Nexa-XBold.otf) format("opentype");
-    font-family: "NexaRegular";
-    src: url(../fonts/NexaRegular.otf) format("opentype");
+    font-family: "Nexa XBold";
+    src: url(../fonts/Nexa-XBold.otf);
 }
 
-/*
-* {
-box-sizing: border-box;
+@font-face {
+    font-family: "Nexa Regular";
+    src: url(../fonts/NexaRegular.otf);
 }
-*/
 
 html {
         background-color: #F3E5D8;
     }
 
 h1, h2, h3, h4 {
-  font-family: "Nexa-XBold";  
+  font-family: "Nexa XBold";  
 }
 
 h1 {
@@ -87,17 +84,17 @@ h4 {
 
 p, form, ul {
     font-size: 1em;
-    font-family: "NexaRegular"; 
+    font-family: "Nexa Regular"; 
 }
 
 a, button {
-    font-family: "Nexa-XBold";
+    font-family: "Nexa XBold";
     text-decoration: none;
 }
 
-header {
-    height: 50vh; 
+header { 
     width: 100vw;
+    height: 20rem;
     background-color: white;
     position: relative;
     z-index: 1;
@@ -132,16 +129,10 @@ nav a {
  header h1 {
     margin-top: 4rem;
     margin-left: 5rem;
-    padding-bottom: 1rem;
 } 
 
 header img:last-of-type {
     position: absolute;
-    background-image: url(../images/homeshape.svg);
-    background-repeat: no-repeat;
-    background-size: 3rem;
-    width: 3rem;
-    height:100%;
     margin-left: -3rem;
     margin-top: 8rem;
 }
@@ -192,8 +183,7 @@ body section:nth-of-type(-n+3) {
     background-image: url(../images/vliegtuiguitzicht2.png);
     background-position: center;
     background-size: cover;
-    height: 50vh;
-    width: 100%;
+    height: 20rem;
     padding-left: 3rem;
     position: relative;
 }
@@ -201,13 +191,13 @@ body section:nth-of-type(-n+3) {
 body section:nth-of-type(-n+3) h2{
     position: absolute;
     bottom: 5.3rem;
-    color: white;
+    color: #00D66C;
 }
 
 body section:nth-of-type(-n+3) h3{
     position: absolute;
     bottom: 2.3rem;
-    color: #00D66C;
+    color: white;
 }
 
 body section:nth-of-type(-n+3) div{
@@ -240,7 +230,7 @@ main h2 {
 }
 
 main input[type="text"] {
-    font-family: "Nexa-XBold";
+    font-family: "Nexa XBold";
     padding: 1rem 0rem 1rem 3.5rem;
     font-size: 1rem;
     color: white;
@@ -302,7 +292,7 @@ form[action="filterandsort"] h3 {
 }
 
 form[action="filterandsort"] legend {
-    font-family: "Nexa-XBold";
+    font-family: "Nexa XBold";
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     padding-top: 1rem;
@@ -407,7 +397,7 @@ article button {
     margin-top: -2rem;
     width: 6rem;
     height: 4rem;
-    font-family: "NexaRegular"; 
+    font-family: "Nexa Regular"; 
     font-size: 0.8rem;
     border: none;
     border-radius: 0.5rem;
@@ -426,21 +416,10 @@ article button:first-of-type {
     background-image: url(../images/toevoegenaanlijst.svg);
 }
 
-section button {
-    border: none;
-    background-color: #ff3268;
-    box-shadow:inset 0 -0.1875em 0.0625em #ca2b55;
-    padding: .4375em 1.5em .5625em;
-    text-decoration: none;
-    border-radius: 1.25em;
-    min-height: 1.5rem;
-    min-width: 1.5rem;
-}
-
 main>a:last-of-type{
     position: absolute;
     bottom: 2rem;
-    font-family: "Nexa-XBold";
+    font-family: "Nexa XBold";
     padding: 1rem 1rem 1rem 1rem;
     font-size: 1rem;
     color: white;
@@ -448,6 +427,99 @@ main>a:last-of-type{
     box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
     border-radius: 3rem;
 }
+
+.leesbundels {
+    padding: 0;
+}
+
+.leesbundels article {
+    background-color: #00D66C;
+    background-image: none;
+    margin-top: 0;
+    border-radius: 0;
+    padding: 1rem;
+    min-height: 13rem;
+}
+
+.leesbundels article:nth-of-type(1) {
+    padding: 5rem 1rem 1rem 1rem;
+}
+
+.leesbundels h3 {
+    border-radius:0;
+    padding-top: 0;
+    background-color: #00D66C;
+    margin-bottom: 0.5rem;
+}
+
+.leesbundels p {
+    color: #202020;
+    margin-bottom: 1rem;
+}
+
+.leesbundels p:nth-of-type(2) {
+    color: white;
+    margin-bottom: 0rem;
+}
+
+.leesbundels article img {
+    float: left;
+    height: auto;
+    width: 8rem;
+    margin-right: 1rem;
+}
+
+.leesbundels article button {
+    height:6rem;
+    width: 3rem;
+    margin: 0rem;
+}
+
+.leesbundels div {
+    background-color: white;
+    padding: 1rem 1rem 1rem 1rem; 
+}
+
+
+.leesbundels div>article {
+    min-height: auto;
+    background-color: white;
+}
+
+.leesbundels div>article:nth-of-type(1) {
+    padding: 1rem;
+}
+
+.leesbundels div>article footer {
+    padding: 0rem;
+    background-color: transparent;
+}
+
+.leesbundels div>article ul{
+    padding-right: 5rem;
+    border-bottom: solid #202020 0.1rem;
+}
+
+.leesbundels div>article li:nth-last-of-type(3) {
+    background: url(../images/commentdark.svg) no-repeat left;
+    background-size: 1.2rem;
+}
+
+.leesbundels div>article li:nth-last-of-type(2) {
+    background: url(../images/likedark.svg) no-repeat left;
+    background-size: 1.2rem;
+}
+
+.leesbundels div>article li:nth-last-of-type(1) {
+    background: url(../images/timedark.svg) no-repeat left;
+    background-size: 1.2rem;
+}
+
+.leesbundels div>article h4, .leesbundels div>article li  {
+    color: #202020;
+}
+
+
 
 aside{
     display: flex;
@@ -480,7 +552,7 @@ aside h3{
 
 aside p {
     display: inline;
-    font-family: "Nexa-XBold"; 
+    font-family: "Nexa XBold"; 
     font-size: 2rem;
     background-color: white;
     color: #00D66C;
@@ -497,7 +569,7 @@ aside p:nth-of-type(2) {
 aside div>a:first-of-type{ 
     display: inline-block;
     margin-top: 2rem;
-    font-family: "Nexa-XBold";
+    font-family: "Nexa XBold";
     padding: 1rem 1.25rem 1rem 1.25rem;
     font-size: 1rem;
     color: white;
@@ -615,6 +687,10 @@ body>footer a {
         justify-content: center;
     }
     
+    body section:nth-of-type(-n+3) {
+        width: 100%;
+    }
+    
     body section:nth-of-type(1) {
         margin-left: 1rem;
 }
@@ -631,8 +707,22 @@ body>footer a {
         align-items: flex-start;
     }
     
+    .leesbundels {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .leesbundels article:nth-of-type(2) {
+    padding: 5rem 1rem 1rem 1rem;
+}
+    
     main article {
         width: calc(50% - 0.5rem);
+    }
+    
+    .leesbundels article {
+        width: calc(50% - 2rem);
     }
     
     aside {
@@ -686,6 +776,14 @@ body>footer a {
     main article {
         width: calc(33% - 0.5rem);
     }
+    
+    .leesbundels article {
+        width: calc(33% - 2rem);
+    }
+    
+    .leesbundels article:nth-of-type(3) {
+    padding: 5rem 1rem 1rem 1rem;
+}
     
     aside>div {
         display: flex;
