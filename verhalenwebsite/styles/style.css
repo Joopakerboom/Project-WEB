@@ -219,7 +219,7 @@ body section:nth-of-type(3) {
 
 main {
     position: relative;
-    padding: 3rem 1rem 7rem 1rem;
+    padding: 3rem 1rem 3rem 1rem;
     background-color: #F3E5D8;
 }
 
@@ -229,7 +229,7 @@ main h2 {
     margin-bottom: 1rem;
 }
 
-main input[type="text"] {
+main div input[type="text"] {
     font-family: "Nexa XBold";
     padding: 1rem 0rem 1rem 3.5rem;
     font-size: 1rem;
@@ -256,23 +256,7 @@ main > button{
     margin-bottom: 0.5rem;
 }
 
-/*main>div {
-	width: calc(100vw - 2rem);
-    height: 0.2rem;
-    background-color: #606060;
-} */
-
-form[action="filterandsort"]:hover {
-    max-height: 90rem;
-}
-
-form[action="filterandsort"] {
-    max-height: 8.5rem;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-    -webkit-transition: 1s;
-    transition: 1s;
+form[action="filterandsort"], form[action="inloggen"] {
     border-radius: .75rem;
     background-color: rgba(255, 255, 255, 0.75);
     background-image: linear-gradient(
@@ -281,14 +265,22 @@ form[action="filterandsort"] {
     rgba(255, 255, 255, 1) 3.5rem,
     rgba(255, 255, 255, 0) 3.5rem,
     rgba(255, 255, 255, 0) 3.5rem);
-    display: none;
 }
 
-form[action="filterandsort"] h3 {
+form[action="inloggen"] {
+    margin-top: 3rem;
+}
+
+form[action="filterandsort"] h3, form[action="inloggen"] h3 {
     border-radius: .75rem .75rem 0rem 0rem;
-    padding: 2rem 0rem 1rem 0rem;
+    padding: 2rem 2rem 1rem 2rem;
     background-color: white;
     color: #00D66C;
+}
+
+form[action="inloggen"] h3 {
+    background-color: #00D66C;
+    color: white;
 }
 
 form[action="filterandsort"] legend {
@@ -296,15 +288,41 @@ form[action="filterandsort"] legend {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     padding-top: 1rem;
-}
-
-form[action="filterandsort"] label {
-    display: block;
-}
-
-form[action="filterandsort"] h3, legend, label {
     padding-left: 2rem;
 }
+
+form[action="filterandsort"] label, form[action="inloggen"] label {
+    display: block;
+    padding-left: 2rem;
+    padding-right: 3rem;
+}
+
+
+form[action="inloggen"] label{
+    font-size: 1.5rem;
+    font-family: "Nexa XBold";
+    margin-top: 1.5rem;
+}
+
+form[action="inloggen"] label input:nth-of-type(1) {
+    display: block;
+    text-align: left;
+    margin-top: 0.5rem;
+    width: 100%;
+    border: 0.1rem solid #2D2D2D;
+    border-radius: .75rem;
+}
+
+form[action="inloggen"] input[type="text"], input[type="email"], input[type="password"]  {
+    padding: 0.5rem;
+    font-family: "Nexa Regular";
+    font-size:1rem;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+  color: #606060
+}
+
 
 form[action="filterandsort"] button {
     color: white;
@@ -322,6 +340,32 @@ form[action="filterandsort"] button {
     margin-top: 1rem;
     margin-left: 2rem;
     margin-bottom: 2.3rem;
+}
+
+form[action="inloggen"]>input:last-of-type {
+    color: white;
+    font-size: 1rem;
+    font-family: "Nexa XBold";
+    border: none;
+    background-color: #ff3268;
+    box-shadow:inset 0 -0.1875em 0.0625em #ca2b55;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 2.3rem;
+}
+
+main>p {
+    color: #2D2D2D;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+main>p>a {
+    color: #00D66C;
+    padding-left: 0.5rem;
 }
 
 main article {
@@ -417,7 +461,6 @@ article button:first-of-type {
 }
 
 main>a:last-of-type{
-    position: absolute;
     bottom: 2rem;
     font-family: "Nexa XBold";
     padding: 1rem 1rem 1rem 1rem;
@@ -426,6 +469,24 @@ main>a:last-of-type{
     background-color: #ff3268;
     box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
     border-radius: 3rem;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.accountmain::after {
+    content: '';
+	position: absolute;
+	background-color: #F3E5D8;
+    width:  10em;
+	height: 10em;
+    transform: rotate(45deg);
+    border-bottom-right-radius: 1rem;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    bottom: -2rem;
+    z-index: -1;
 }
 
 .leesbundels {
@@ -475,13 +536,12 @@ main>a:last-of-type{
     margin: 0rem;
 }
 
-.leesbundels div {
+.leesbundels>div {
     background-color: white;
     padding: 1rem 1rem 1rem 1rem; 
 }
 
-
-.leesbundels div>article {
+.leesbundels>div>article {
     min-height: auto;
     background-color: white;
 }
@@ -518,8 +578,6 @@ main>a:last-of-type{
 .leesbundels div>article h4, .leesbundels div>article li  {
     color: #202020;
 }
-
-
 
 aside{
     display: flex;
@@ -618,7 +676,8 @@ body>footer {
     width: 100vw;
     left: 50%;
     margin-left: -50vw;
-    background-color: #F7F7F7;   
+    background-color: #F7F7F7;  
+    z-index: -2;
 }
 
 body>footer img:first-of-type {

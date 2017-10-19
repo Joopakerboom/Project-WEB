@@ -9,11 +9,22 @@
 
 <body>
 
-    <header>
-        <img src="images/transavialogo.svg" alt="transavialogo">
-        <h1>Meld je aan voor Mijn Transavia</h1>
+    <header id="top">
+        <div>
+           <img src="images/transavialogo.svg" alt="transavialogo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leesbundels.html">Leesbundels</a></li>
+                    <li><a href="account.hmtl">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/accountshape.svg" alt="homeicon">
+            <h1>Meld je aan</h1>
+        </div>
     </header>
 
+<!--
     <main>
        
         <form action="registreren">
@@ -34,6 +45,22 @@
         </form>
 
         <h4>Al een account?<a href="inlogformulier.html"> Log in!</a></h4>
+
+    </main>
+-->
+
+ <main class="accountmain">
+
+        <form action="inloggen">
+           <h3>Word je ook lid?</h3>
+               <label> Naam <input type="text" required> </label>
+                <label> Emailadres <input type="email" placeholder="gebruiker@email.com" required> </label>
+            <label> Wachtwoord <input type="password" required> </label>
+            <input type="submit" value="Registreren">
+        </form>
+
+        <p>Nog geen account? <a href="registreren.html">Meld je nu aan!</a></p>
+        
 
     </main>
 

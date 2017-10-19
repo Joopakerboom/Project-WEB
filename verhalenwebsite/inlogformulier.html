@@ -9,23 +9,56 @@
 
 <body>
 
-    <header>
-        <img src="images/transavialogo.svg" alt="transavialogo">
-        <h1>inloggen met transavia</h1>
+    <header id="top">
+        <div>
+           <img src="images/transavialogo.svg" alt="transavialogo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leesbundels.html">Leesbundels</a></li>
+                    <li><a href="account.hmtl">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/accountshape.svg" alt="homeicon">
+            <h1>Log in bij Transavia</h1>
+        </div>
     </header>
 
-    <main>
+    <main class="accountmain">
 
         <form action="inloggen">
-
+           <h3>Inloggen</h3>
             <label> Emailadres <input type="email" placeholder="gebruiker@email.com" required> </label>
             <label> Wachtwoord <input type="password" required> </label>
-            <input type="submit" value="inloggen">
+            <input type="submit" value="Inloggen">
         </form>
 
-        <h4>Nog geen account?<a href="aanmelden.html"> Meld je nu aan!</a></h4>
+        <p>Nog geen account? <a href="registreren.html">Meld je nu aan!</a></p>
+        
 
     </main>
+    
+    <footer>
+       
+        <a href="#top"><img src="images/backtotopbutton.svg" alt="back tot top button"></a>
+<div>
+        <h3>transavia</h3>
+
+        <ul>
+            <li>
+                <a href="https://www.transavia.com/nl-NL/service/klantenservice/">Whatsapp</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/transavia">
+                    Youtube
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/transavia">Facebook</a>
+            </li>
+        </ul>
+</div>
+    </footer>
 
 </body>
 
