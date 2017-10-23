@@ -61,6 +61,10 @@ html {
         background-color: #F3E5D8;
     }
 
+html.leesbundelsbackground {
+        background-color: #00D66C;
+    }
+
 h1, h2, h3, h4 {
   font-family: "Nexa XBold";  
 }
@@ -90,6 +94,11 @@ p, form, ul {
 a, button {
     font-family: "Nexa XBold";
     text-decoration: none;
+}
+
+a>h3 {
+    color: white;
+   text-decoration: none; 
 }
 
 header { 
@@ -123,12 +132,27 @@ header li {
 
 nav a {
     color: #00D66C;
-    padding-left: 1rem;
+    margin-left: 1rem;
+}
+
+nav a:active {
+    color: #2800A0;
+}
+
+nav li:active, nav li:hover {
+    transition: .2s;
+    transform: scale(1.2, 1.2);
+}
+
+nav a.selected {
+   color: #2800A0;
+    border-bottom: 0.1rem solid #2800A0;
 }
 
  header h1 {
     margin-top: 4rem;
     margin-left: 5rem;
+     padding-right: 1rem;
 } 
 
 header img:last-of-type {
@@ -136,32 +160,6 @@ header img:last-of-type {
     margin-left: -3rem;
     margin-top: 8rem;
 }
-
-/* header::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/homeshape.svg);
-    background-repeat: no-repeat;
-    background-size: 3rem;
-    width: 3rem;
-    height:100%;
-    margin-left: 1rem;
-    margin-top: 8rem;
-} */
-
-main ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: white;
-}
-main ::-moz-placeholder { /* Firefox 19+ */
-  color: white;
-}
-main :-ms-input-placeholder { /* IE 10+ */
-  color: white;
-}
-main :-moz-placeholder { /* Firefox 18- */
-  color: white;
-}
-
 header::after{
     content: '';
 	position: absolute;
@@ -179,7 +177,7 @@ header::after{
 }
 
 
-body section:nth-of-type(-n+3) {
+body div>section:nth-of-type(-n+3) {
     background-image: url(../images/vliegtuiguitzicht2.png);
     background-position: center;
     background-size: cover;
@@ -188,19 +186,19 @@ body section:nth-of-type(-n+3) {
     position: relative;
 }
 
-body section:nth-of-type(-n+3) h2{
+body div>section:nth-of-type(-n+3) h2{
     position: absolute;
     bottom: 5.3rem;
     color: #00D66C;
 }
 
-body section:nth-of-type(-n+3) h3{
+body div>section:nth-of-type(-n+3) h3{
     position: absolute;
     bottom: 2.3rem;
     color: white;
 }
 
-body section:nth-of-type(-n+3) div{
+body div>section:nth-of-type(-n+3) div{
     left: 0;
     width: 40%;
 	height: 0.7rem;
@@ -209,11 +207,11 @@ body section:nth-of-type(-n+3) div{
     background-color: #00D66C;
 }
 
-body section:nth-of-type(2) {
+body div>section:nth-of-type(2) {
     display: none;
 }
 
-body section:nth-of-type(3) {
+body div>section:nth-of-type(3) {
     display: none;
 }
 
@@ -227,22 +225,45 @@ main h2 {
     color: #2800A0;
     margin-left: 4rem;
     margin-bottom: 1rem;
+     padding-right: 1rem;
 }
 
 main div input[type="text"] {
     font-family: "Nexa XBold";
-    padding: 1rem 0rem 1rem 3.5rem;
+    padding: 1rem 0rem 1rem 4rem;
     font-size: 1rem;
     color: white;
     background-color: #2800A0;
     background-image: url(../images/searchiconwhite.svg);
     background-repeat: no-repeat;
     background-size: 2rem;
-    background-position: 1rem;
-    border-radius: 3rem;
+    background-position: 1.5rem;
+    border-radius: 5rem;
     border: none;
     margin-left: 4rem;
     margin-bottom: 2rem;
+    display: inline-block;
+    width: 1rem;
+    transition: .5s;
+}
+
+main div input[type="text"]:focus {
+    border-radius: 3rem;
+    background-color: #5E40B8;
+    transition: .5s;
+    width: 10rem;
+}
+
+main div input[type="text"]:hover {
+    background-color: #5E40B8;
+}
+
+main div input[type="text"]::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main div input[type="text"]:focus::-webkit-input-placeholder {
+  color: white;
 }
 
 main > button{ 
@@ -254,33 +275,6 @@ main > button{
     font-size: 1rem;
     border: none;
     margin-bottom: 0.5rem;
-}
-
-form[action="filterandsort"], form[action="inloggen"] {
-    border-radius: .75rem;
-    background-color: rgba(255, 255, 255, 0.75);
-    background-image: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 1rem,
-    rgba(255, 255, 255, 1) 3.5rem,
-    rgba(255, 255, 255, 0) 3.5rem,
-    rgba(255, 255, 255, 0) 3.5rem);
-}
-
-form[action="inloggen"] {
-    margin-top: 3rem;
-}
-
-form[action="filterandsort"] h3, form[action="inloggen"] h3 {
-    border-radius: .75rem .75rem 0rem 0rem;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: white;
-    color: #00D66C;
-}
-
-form[action="inloggen"] h3 {
-    background-color: #00D66C;
-    color: white;
 }
 
 form[action="filterandsort"] legend {
@@ -296,33 +290,6 @@ form[action="filterandsort"] label, form[action="inloggen"] label {
     padding-left: 2rem;
     padding-right: 3rem;
 }
-
-
-form[action="inloggen"] label{
-    font-size: 1.5rem;
-    font-family: "Nexa XBold";
-    margin-top: 1.5rem;
-}
-
-form[action="inloggen"] label input:nth-of-type(1) {
-    display: block;
-    text-align: left;
-    margin-top: 0.5rem;
-    width: 100%;
-    border: 0.1rem solid #2D2D2D;
-    border-radius: .75rem;
-}
-
-form[action="inloggen"] input[type="text"], input[type="email"], input[type="password"]  {
-    padding: 0.5rem;
-    font-family: "Nexa Regular";
-    font-size:1rem;
-}
-
-input[type="email"]::-webkit-input-placeholder {
-  color: #606060
-}
-
 
 form[action="filterandsort"] button {
     color: white;
@@ -340,32 +307,6 @@ form[action="filterandsort"] button {
     margin-top: 1rem;
     margin-left: 2rem;
     margin-bottom: 2.3rem;
-}
-
-form[action="inloggen"]>input:last-of-type {
-    color: white;
-    font-size: 1rem;
-    font-family: "Nexa XBold";
-    border: none;
-    background-color: #ff3268;
-    box-shadow:inset 0 -0.1875em 0.0625em #ca2b55;
-    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-    text-decoration: none;
-    border-radius: 3rem;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-bottom: 2.3rem;
-}
-
-main>p {
-    color: #2D2D2D;
-    margin-top: 2rem;
-    padding-left: 2rem;
-}
-
-main>p>a {
-    color: #00D66C;
-    padding-left: 0.5rem;
 }
 
 main article {
@@ -422,14 +363,6 @@ article li:nth-last-of-type(1) {
     color: white;
 }
 
-/* article p {
-    display: block;
-    color: white;
-    padding: 3rem 2rem 3rem 2rem;
-    background: url(../images/vliegtuiguitzicht.png) no-repeat center;
-    background-size: 100%;
-} */
-
 article img {
     display: block;
     width: 100%;
@@ -437,7 +370,7 @@ article img {
     object-fit: cover;
 }
 
-article button {
+article button, .leesbundels section button {
     margin-top: -2rem;
     width: 6rem;
     height: 4rem;
@@ -454,7 +387,7 @@ article button {
     background-size: 1.5rem;
 }
 
-article button:first-of-type {
+article button:first-of-type, .leesbundels section button:first-of-type {
     margin-left: 2rem;
     margin-bottom: 1.5rem;
     background-image: url(../images/toevoegenaanlijst.svg);
@@ -473,6 +406,126 @@ main>a:last-of-type{
     margin-top: 2rem;
 }
 
+
+/* INLOG/ REGISTREREN FORMULIEREN */
+
+form[action="filterandsort"], form[action="inloggen"] {
+    border-radius: .75rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 1rem,
+    rgba(255, 255, 255, 1) 3.5rem,
+    rgba(255, 255, 255, 0) 3.5rem,
+    rgba(255, 255, 255, 0) 3.5rem);
+}
+
+main.accountmain form:invalid {
+ background-color: rgba(255, 255, 255, 0.75);
+}
+
+form[action="inloggen"] {
+    margin-top: 3rem;
+}
+
+form[action="filterandsort"] h3, form[action="inloggen"] h3 {
+    border-radius: .75rem .75rem 0rem 0rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: white;
+    color: #00D66C;
+}
+
+form[action="inloggen"] h3 {
+    background-color: #00D66C;
+    color: white;
+}
+
+form[action="inloggen"] label{
+    font-size: 1.5rem;
+    font-family: "Nexa XBold";
+    margin-top: 1.5rem;
+}
+
+form[action="inloggen"] label>input {
+    display: block;
+    text-align: left;
+    margin-top: 0.5rem;
+    width: 100%;
+    border: 0.1rem solid #2D2D2D;
+    border-radius: .75rem;
+     padding: 0.5rem;
+    font-family: "Nexa Regular";
+    font-size:1rem;
+    transition:all .2s;
+    
+}
+
+form[action="inloggen"] label>input:valid {
+  border-color: #00D66C;
+} 
+
+form[action="inloggen"] label>input:invalid {
+  border-color: #ff3268;
+  background-color: rgba(255, 50, 104, 0.10);
+}
+
+form[action="inloggen"] label>input:focus {
+  transform: scale(1.05, 1.05);
+}
+
+input[type="email"]::-webkit-input-placeholder {
+  color: #606060
+}
+
+main.accountmain form>fieldset>input:last-of-type {
+    color: white;
+    font-size: 1rem;
+    font-family: "Nexa XBold";
+    border: none;
+    background-color: #ff3268;
+    box-shadow:inset 0 -0.1875em 0.0625em #ca2b55;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 2.3rem;
+}
+
+main.accountmain form>fieldset>input:last-of-type:hover, main.accountmain form>fieldset>input:last-of-type:focus {
+    background-color: #ff658e;
+}
+
+main.accountmain form>fieldset>input:last-of-type:active {
+    margin-top: 1.125rem;
+    background-color: #ff3268;
+    box-shadow: inset 0 0.125em 0.0625em #ca2b55;
+}
+
+
+main.accountmain>form>fieldset .feedback {
+    display: block;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    color: #00D66C;
+    font-family: "Nexa Xbold";
+}
+
+main.accountmain>form>fieldset:invalid .feedback {
+  display:none;
+}
+
+main.accountmain>p {
+    color: #2D2D2D;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+main.accountmain>p>a {
+    color: #00D66C;
+    padding-left: 0.5rem;
+}
+
 .accountmain::after {
     content: '';
 	position: absolute;
@@ -489,21 +542,39 @@ main>a:last-of-type{
     z-index: -1;
 }
 
-.leesbundels {
+/* LEESBUNDELS */
+
+main.leesbundels {
     padding: 0;
+   background-color: #00D66C;
+    /*
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+*/
 }
 
-.leesbundels article {
+.leesbundels section {
     background-color: #00D66C;
     background-image: none;
     margin-top: 0;
     border-radius: 0;
-    padding: 1rem;
-    min-height: 13rem;
+    padding: 1rem 1rem 0rem 1rem;
 }
 
-.leesbundels article:nth-of-type(1) {
-    padding: 5rem 1rem 1rem 1rem;
+.leesbundels section>div:nth-of-type(1) {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+}
+
+ .leesbundels section>div>div:nth-of-type(2) {
+        max-width: 13rem;
+}
+
+.leesbundels section:nth-of-type(1) {
+    padding: 5rem 1rem 0rem 1rem;
 }
 
 .leesbundels h3 {
@@ -523,61 +594,100 @@ main>a:last-of-type{
     margin-bottom: 0rem;
 }
 
-.leesbundels article img {
-    float: left;
-    height: auto;
+.leesbundels section img {
     width: 8rem;
     margin-right: 1rem;
 }
 
-.leesbundels article button {
-    height:6rem;
+.leesbundels section button {
+    height: 6rem;
     width: 3rem;
     margin: 0rem;
 }
 
-.leesbundels>div {
-    background-color: white;
-    padding: 1rem 1rem 1rem 1rem; 
+.leesbundels section button:first-of-type {
+    margin-left: 0rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0rem;
 }
 
-.leesbundels>div>article {
-    min-height: auto;
+.leesbundels section>div:nth-of-type(2){
+    box-sizing: border-box;
+    position: relative;
+    margin-left: -1rem;
+    width: 100vw;
     background-color: white;
-}
-
-.leesbundels div>article:nth-of-type(1) {
     padding: 1rem;
+    max-width: 70rem;
 }
 
-.leesbundels div>article footer {
+.leesbundels section>div:nth-of-type(2)::before {
+    content: '';
+    box-sizing: border-box;
+    top: 0;
+	position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -50vw;
+	background-color: white;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+.leesbundels section>div:nth-of-type(2)::after {
+    content: '';
+	position: absolute;
+	background-color: white;
+    width:  5rem;
+	height: 5rem;
+    transform: rotate(45deg);
+    border-top-left-radius: .3rem;
+    left: 2.5rem; 
+    top: 0.1rem;
+    z-index: 1;
+
+}
+
+.leesbundels section>div>article {
+    background-color: white;
+    z-index: 2;
+}
+
+.leesbundels section>div>article:nth-last-of-type(-n+6) {
+    display: none;
+}
+
+.leesbundels section>div>article footer {
     padding: 0rem;
     background-color: transparent;
 }
 
-.leesbundels div>article ul{
+.leesbundels section>div>article ul{
     padding-right: 5rem;
     border-bottom: solid #202020 0.1rem;
 }
 
-.leesbundels div>article li:nth-last-of-type(3) {
+.leesbundels section>div>article li:nth-last-of-type(3) {
     background: url(../images/commentdark.svg) no-repeat left;
     background-size: 1.2rem;
 }
 
-.leesbundels div>article li:nth-last-of-type(2) {
+.leesbundels section>div>article li:nth-last-of-type(2) {
     background: url(../images/likedark.svg) no-repeat left;
     background-size: 1.2rem;
 }
 
-.leesbundels div>article li:nth-last-of-type(1) {
+.leesbundels section>div>article li:nth-last-of-type(1) {
     background: url(../images/timedark.svg) no-repeat left;
     background-size: 1.2rem;
 }
 
-.leesbundels div>article h4, .leesbundels div>article li  {
+.leesbundels section>div>article h4, .leesbundels div>article li  {
     color: #202020;
 }
+
+/* VLUCHT TIJD */
 
 aside{
     display: flex;
@@ -671,6 +781,8 @@ aside::after{
     z-index: -1;
 }
 
+/* FOOTER */
+
 body>footer {
     position: relative;
     width: 100vw;
@@ -739,6 +851,8 @@ body>footer a {
     color: transparent;
 }
 
+/* MEDIA QUERIES TABLET */
+
 @media (min-width: 45em){
     
     body>div  {
@@ -746,15 +860,15 @@ body>footer a {
         justify-content: center;
     }
     
-    body section:nth-of-type(-n+3) {
+    body div>section:nth-of-type(-n+3) {
         width: 100%;
     }
     
-    body section:nth-of-type(1) {
+    body div>section:nth-of-type(1) {
         margin-left: 1rem;
 }
     
-    body section:nth-of-type(2) {
+    body div>section:nth-of-type(2) {
     display: block;
         margin-right: 1rem;
 }
@@ -772,16 +886,29 @@ body>footer a {
         flex-wrap: wrap;
     }
     
-    .leesbundels article:nth-of-type(2) {
-    padding: 5rem 1rem 1rem 1rem;
+    .leesbundels section>div>div:nth-of-type(2) {
+    justify-content: flex-start;
 }
     
-    main article {
+    .leesbundels section:nth-of-type(2) {
+    padding: 5rem 1rem 0rem 1rem;
+}
+    
+    main>div:nth-of-type(2)>article {
         width: calc(50% - 0.5rem);
     }
     
-    .leesbundels article {
-        width: calc(50% - 2rem);
+    .leesbundels section>div>article {
+        width: calc(50% - 1rem);
+    }
+    
+    .leesbundels section>div>article:nth-last-of-type(-n+3) {
+    display: block;
+}
+    
+    .leesbundels section {
+        box-sizing: border-box;
+        width: 50%;
     }
     
     aside {
@@ -799,9 +926,11 @@ body>footer a {
     
 }
 
+/* MEDIA QUERIES DESKTOP */
+
 @media (min-width: 65em){
     
-    body, header>div, aside>div, footer>div {
+    body, header>div, aside>div, footer>div{
         max-width: 70rem;
         margin: 0 auto;
     }
@@ -811,11 +940,11 @@ body>footer a {
         justify-content: center;
     }
     
-    body section:nth-of-type(2) {
+    body div>section:nth-of-type(2) {
         margin-right: 0rem;
 }
     
-    body section:nth-of-type(3) {
+    body div>section:nth-of-type(3) {
         display: block;
         margin-right: 1rem;
 }
@@ -832,16 +961,24 @@ body>footer a {
         align-items: flex-start;
     }
     
-    main article {
+    main>div:nth-of-type(2)>article {
         width: calc(33% - 0.5rem);
     }
     
-    .leesbundels article {
-        width: calc(33% - 2rem);
+    .leesbundels section>div>article {
+        width: calc(33% - 1rem);
     }
     
-    .leesbundels article:nth-of-type(3) {
-    padding: 5rem 1rem 1rem 1rem;
+    .leesbundels section>div>article:nth-last-of-type(-n+6) {
+    display: block;
+}
+    
+    .leesbundels section {
+        width: 33%;
+    }
+    
+    .leesbundels section:nth-of-type(3) {
+    padding: 5rem 1rem 0rem 1rem;
 }
     
     aside>div {
