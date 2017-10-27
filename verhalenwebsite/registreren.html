@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>loginformulier</title>
+    <title>Aanmelden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -11,12 +12,12 @@
 
     <header id="top">
         <div>
-           <img src="images/transavialogo.svg" alt="transavialogo">
+            <img src="images/transavialogo.svg" alt="transavialogo">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="leesbundels.html">Leesbundels</a></li>
-                    <li><a href="account.hmtl" class="selected" >Account</a></li>
+                    <li><a href="inloggen.html" class="selected">Account</a></li>
                 </ul>
             </nav>
             <img src="images/accountshape.svg" alt="homeicon">
@@ -24,49 +25,93 @@
         </div>
     </header>
 
-<!--
-    <main>
-       
-        <form action="registreren">
-           
-            <fieldset>
-                <legend>Je gegevens</legend>
-                <label> Voornaam <input type="text" required> </label>
-                <label> Achternaam <input type="text" required> </label>
-            </fieldset>
+    <main class="accountmain">
 
+        <section>
+            <div>
+                <div>
+                    <h2>Waarom?</h2>
+                </div>
+
+                <div>
+                    <p>Altijd en overal</p>
+                </div>
+
+                <div>
+                    <p>99<br>verhalen</p>
+                </div>
+
+                <div>
+                    <p>Jouw account</p>
+                </div>
+            </div>
+
+            <div>
+                <img src="images/flightwindowanimation.gif" alt="vliegtuiganimatie">
+            </div>
+
+            <div>
+                <div>
+                    <p>Lees in<br>jouw tijd</p>
+                </div>
+
+                <div>
+                    <p>Download<br>voor later</p>
+                </div>
+
+                <img src="images/transavialogowhite.svg" alt="transavialogo">
+
+                <div>
+                    <p>Maak account</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <form action="inloggen">
+            <h3>Aanmelden</h3>
+            <fieldset>
+                <legend>Vul je gegevens in</legend>
+                <label> Naam <input type="text" placeholder="Hoe mogen we je noemen?" required> </label>
+                <p class="feedback">Goed ingevuld!</p>
+            </fieldset>
             <fieldset>
                 <legend>Je accountgegevens</legend>
                 <label> Emailadres <input type="email" placeholder="gebruiker@email.com" required> </label>
                 <label> Wachtwoord <input type="password" required> </label>
-            </fieldset>
-            <input type="submit" value="Registreren">
-            
-        </form>
-
-        <h4>Al een account?<a href="inlogformulier.html"> Log in!</a></h4>
-
-    </main>
--->
-
- <main class="accountmain">
-
-        <form action="inloggen">
-           <h3>Word je ook lid?</h3>
-              <fieldset>
-               <label> Naam <input type="text" required> </label>
-               </fieldset>
-               <fieldset>
-                <label> Emailadres <input type="email" placeholder="gebruiker@email.com" required> </label>
-            <label> Wachtwoord <input type="password" required> </label>
-            <input type="submit" value="Registreren">
+                <p class="feedback">Account herkend!</p>
+                <input type="submit" value="Registreren">
             </fieldset>
         </form>
 
-        <p>Nog geen account? <a href="registreren.html">Meld je nu aan!</a></p>
-        
+        <p>Heb je al een account? <a href="inloggen.html">Log in!</a></p>
+
 
     </main>
+
+    <footer>
+
+        <a href="#top"><img src="images/backtotopbutton.svg" alt="back tot top button"></a>
+        <div>
+            <h3>transavia</h3>
+
+            <ul>
+                <li>
+                    <a href="https://www.transavia.com/nl-NL/service/klantenservice/">Whatsapp</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/transavia">
+                    Youtube
+                </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/transavia">Facebook</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
 
 </body>
 

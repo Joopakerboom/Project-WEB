@@ -130,7 +130,12 @@ header li {
     display: inline-block;
 }
 
+header>div> nav>ul>li>a {
+    transition: .2s;
+}
+
 nav a {
+    display: inline-block;
     color: #00D66C;
     margin-left: 1rem;
 }
@@ -139,8 +144,7 @@ nav a:active {
     color: #2800A0;
 }
 
-nav li:active, nav li:hover {
-    transition: .2s;
+nav>ul>li>a:hover, nav>ul>li>a:focus {
     transform: scale(1.2, 1.2);
 }
 
@@ -215,6 +219,8 @@ body div>section:nth-of-type(3) {
     display: none;
 }
 
+/* MAIN CONTENT */
+
 main {
     position: relative;
     padding: 3rem 1rem 3rem 1rem;
@@ -266,7 +272,7 @@ main div input[type="text"]:focus::-webkit-input-placeholder {
   color: white;
 }
 
-main > button{ 
+main>button{ 
     display: block;
     color: #606060;
     background: url(../images/sorfilter.svg) no-repeat left;
@@ -275,14 +281,13 @@ main > button{
     font-size: 1rem;
     border: none;
     margin-bottom: 0.5rem;
+    transition: .5s;
 }
 
-form[action="filterandsort"] legend {
-    font-family: "Nexa XBold";
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    padding-top: 1rem;
-    padding-left: 2rem;
+main>button:focus {
+    background: url(../images/exitbutton.svg) no-repeat left;
+    background-size: 2.5rem;
+    color: white;
 }
 
 form[action="filterandsort"] label, form[action="inloggen"] label {
@@ -304,7 +309,7 @@ form[action="filterandsort"] button {
     background-repeat: no-repeat;
     background-size: 1.5rem;
     background-position: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-left: 2rem;
     margin-bottom: 2.3rem;
 }
@@ -385,7 +390,24 @@ article button, .leesbundels section button {
     background-repeat: no-repeat;
     background-position: 50% 25%;
     background-size: 1.5rem;
+    transition: .5s;
 }
+
+article button:hover, .leesbundels section button:hover, article button:focus, .leesbundels section button:focus {
+   background-color: #5E40B8; 
+}
+
+/*
+article button, .leesbundels section button {
+    background-image: url(../images/downloadcomplete.svg);
+    background-size: 2rem;
+  background-color: #ff3268;
+}
+
+article button:first-of-type, .leesbundels section button:first-of-type {
+    background-image: url(../images/toevoegenaanlijstcomplete.svg);
+}
+*/
 
 article button:first-of-type, .leesbundels section button:first-of-type {
     margin-left: 2rem;
@@ -406,8 +428,136 @@ main>a:last-of-type{
     margin-top: 2rem;
 }
 
+/* INLOG/ REGISTREREN PAGINA/ FORMULIEREN */
 
-/* INLOG/ REGISTREREN FORMULIEREN */
+main.accountmain>section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin-top: 3rem;
+    height: 30rem;
+}
+
+main.accountmain>section>div {
+    width: calc(50% - 0.5rem);
+}
+
+main.accountmain>section>div>div {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0rem;
+    background-color: #ff3268;
+    border-radius: 0.75rem;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+}
+
+main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(1) {
+    height: 20%;
+}
+
+main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(2) {
+    height: 50%;
+    background-color: #2800A0;
+    border-radius: 50rem;
+    background-image: url(../images/altijdbijje.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5rem;
+}
+
+main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(2)>p, main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(4)>p {
+    color: transparent;
+}
+
+main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(3) {
+    height: 30%;
+    background-color: #00D66C;
+}
+
+main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(3)>p::first-line {
+    font-size: 3rem;
+}
+
+main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(4) {
+    height: calc(30% - 0.5rem);
+    background-color: white;
+    border-radius: .75rem;
+    background-image: url(../images/jouwaccount.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5rem;
+    width: 100%;
+    display: none;
+}
+
+main.accountmain>section>div:nth-of-type(2) {
+    display: none;
+}
+
+main.accountmain>section>div:nth-of-type(2)>img {
+    width: 100%;
+}
+
+main.accountmain>section>div:nth-of-type(3) {
+    position: relative;
+}
+
+main.accountmain>section>div:nth-of-type(3)>div:nth-of-type(1) {
+    height: calc(70% + 1rem);
+    background-color: #2800A0;
+    line-height: 8rem;
+    background-image: url(../images/leesinjouwtijd.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4rem;
+}
+
+main.accountmain>section>div:nth-of-type(3)>div:nth-of-type(2) {
+    height: 30%;
+    background-color: #00D66C;
+    line-height: 5rem;
+    background-image: url(../images/downloadvoorlater.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4rem;
+}
+
+main.accountmain>section>div:nth-of-type(3)>img {
+    position: absolute;
+    top: calc(30% + 1rem);
+    right: 0;
+    margin-bottom: 1rem;
+    align-self: flex-end;
+    margin-left: auto;
+    display: none;
+}
+
+main.accountmain>section>div:nth-of-type(3)>div:nth-of-type(3) {
+    height: calc(30% - 0.5rem);
+    background-color: #ff3268;
+    background-position: center;
+    background-size: 4rem;
+    border-radius: 10rem;
+    width: 100%;
+    display: none;
+}
+
+main.accountmain>section>div>div>h2, main.accountmain>section>div>div>p  { 
+    margin: 0 auto;
+    padding: 0rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Nexa XBold";
+    font-size: 1.2rem;
+    top: 50%;
+    left:  50%;
+    position: absolute;
+    transform:translateX(-50%) translateY(-50%);
+}
 
 form[action="filterandsort"], form[action="inloggen"] {
     border-radius: .75rem;
@@ -418,6 +568,18 @@ form[action="filterandsort"], form[action="inloggen"] {
     rgba(255, 255, 255, 1) 3.5rem,
     rgba(255, 255, 255, 0) 3.5rem,
     rgba(255, 255, 255, 0) 3.5rem);
+    max-width: 45rem;
+    transition: .5s;
+}
+
+form[action="filterandsort"].dancer {
+    display: none;
+    transition: 5s;
+}
+
+form[action="filterandsort"].swag {
+    display: block;
+    max-width: 100%; 
 }
 
 main.accountmain form:invalid {
@@ -433,18 +595,60 @@ form[action="filterandsort"] h3, form[action="inloggen"] h3 {
     padding: 2rem 2rem 1rem 2rem;
     background-color: white;
     color: #00D66C;
-}
-
-form[action="inloggen"] h3 {
-    background-color: #00D66C;
+     background-color: #00D66C;
     color: white;
 }
 
-form[action="inloggen"] label{
+form[action="filterandsort"] fieldset>legend, form[action="inloggen"] fieldset>legend {
+    padding-left: 2rem;
+    padding-top: 2rem;
     font-size: 1.5rem;
     font-family: "Nexa XBold";
-    margin-top: 1.5rem;
+    color: #00D66C;
 }
+
+
+form[action="filterandsort"] label, form[action="inloggen"] label{
+    position: relative;
+    font-size: 1.2rem;
+    font-family: "Nexa XBold";
+    margin-top: 1rem;
+}
+
+form[action="filterandsort"] label>input {
+    float: left;
+    top: 50%;
+  transform: translateY(-50%);
+    margin-right: 1rem;
+    -webkit-appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: transparent;
+    border: 0.2rem solid rgba(96, 96, 96, 0.5);
+    border-radius: .75rem;
+    transition: .2s;
+    outline: none;
+     background-position: center;
+    background-size: 0rem;
+}
+
+form[action="filterandsort"] label>input[type="checkbox"] {
+    border-radius: .2rem;
+}
+
+form[action="filterandsort"] label>input:focus, form[action="filterandsort"] label>input:hover {
+     border: 0.2rem solid #202020;
+}
+
+form[action="filterandsort"] label>input:checked {
+    border: 0.2rem solid #00D66C;
+    background-image: url(../images/checkform.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.2rem;
+}
+
+
 
 form[action="inloggen"] label>input {
     display: block;
@@ -470,7 +674,7 @@ form[action="inloggen"] label>input:invalid {
 }
 
 form[action="inloggen"] label>input:focus {
-  transform: scale(1.05, 1.05);
+  transform: scale(1.02, 1.02);
 }
 
 input[type="email"]::-webkit-input-placeholder {
@@ -478,6 +682,7 @@ input[type="email"]::-webkit-input-placeholder {
 }
 
 main.accountmain form>fieldset>input:last-of-type {
+    -webkit-appearance: none;
     color: white;
     font-size: 1rem;
     font-family: "Nexa XBold";
@@ -492,12 +697,17 @@ main.accountmain form>fieldset>input:last-of-type {
     margin-bottom: 2.3rem;
 }
 
-main.accountmain form>fieldset>input:last-of-type:hover, main.accountmain form>fieldset>input:last-of-type:focus {
+main>a:last-of-type:hover, main>a:last-of-type:focus, main.accountmain form>fieldset>input:last-of-type:hover, main.accountmain form>fieldset>input:last-of-type:focus {
     background-color: #ff658e;
 }
 
 main.accountmain form>fieldset>input:last-of-type:active {
     margin-top: 1.125rem;
+    background-color: #ff3268;
+    box-shadow: inset 0 0.125em 0.0625em #ca2b55;
+}
+
+main>a:last-of-type:active, main.accountmain form>fieldset>input:last-of-type:active {
     background-color: #ff3268;
     box-shadow: inset 0 0.125em 0.0625em #ca2b55;
 }
@@ -597,6 +807,16 @@ main.leesbundels {
 .leesbundels section img {
     width: 8rem;
     margin-right: 1rem;
+    box-shadow: 0rem;
+}
+
+.leesbundels section img:focus {
+    margin-top: -1rem;
+    box-shadow: 0rem 0.5rem 1rem rgba(32,32,32,0.5);
+    transition-delay: .2s;
+    transition: .5s;
+    outline: 0;
+    border-radius: .75rem;
 }
 
 .leesbundels section button {
@@ -611,7 +831,13 @@ main.leesbundels {
     margin-bottom: 0rem;
 }
 
-.leesbundels section>div:nth-of-type(2){
+@keyframes leesbundelinhoud {
+    0% {top: -6rem; opacity: 0;}
+    50% {opacity: 0;}
+    100% {top: 0rem; opacity: 1;}
+}
+
+.leesbundels section>div:nth-of-type(2).dancer{
     box-sizing: border-box;
     position: relative;
     margin-left: -1rem;
@@ -619,6 +845,17 @@ main.leesbundels {
     background-color: white;
     padding: 1rem;
     max-width: 70rem;
+    margin-top: -18rem;
+    visibility: hidden;
+}
+
+.leesbundels section>div:nth-of-type(2).dancing {
+    margin-top: 0rem;
+    transition: .5s;
+    visibility: visible;
+    animation: leesbundelinhoud 1s;
+    transition-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 .leesbundels section>div:nth-of-type(2)::before {
@@ -650,7 +887,7 @@ main.leesbundels {
 }
 
 .leesbundels section>div>article {
-    background-color: white;
+    background-color: transparent;
     z-index: 2;
 }
 
@@ -689,7 +926,7 @@ main.leesbundels {
 
 /* VLUCHT TIJD */
 
-aside{
+body>section{
     display: flex;
     justify-content: center;
     padding: 2rem 0rem 2rem 0rem;
@@ -701,42 +938,49 @@ aside{
     z-index: 1;
 }
 
-aside div>div:nth-of-type(1){
+body>section>div:nth-of-type(1)>div:nth-of-type(1){
+    display: flex;
     margin-left: 1rem;
     max-width: 25rem;
 }
 
 
-aside img {
-    float: left;
+body>section img {
     width: 8.5rem;
-    margin-right: 1rem;
 }
 
-aside h3{
-    padding-bottom: 1.5rem;
+body>section>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2) {
+    position: relative;
+    margin-left: 1rem;
+    display: block;
+}
+
+body>section h3{
+    padding-bottom: 0.5rem;
     color: white;
 }
 
-aside p {
-    display: inline;
+body>section p {
+    display: inline-block;
     font-family: "Nexa XBold"; 
     font-size: 2rem;
-    background-color: white;
-    color: #00D66C;
-    padding: 1rem 1.2rem 1rem 1.2rem;
+    background-color: #FF3268;
+    color: white;
+    padding: 1rem 1rem 1rem 1rem;
     border-radius: .75rem;
+    width: 10.2rem;
+    letter-spacing: 0.2rem;
 }
 
-aside p:nth-of-type(2) {
+body>section p:nth-of-type(2) {
     background-color: #ff3268;
     color: white;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
-aside div>a:first-of-type{ 
+body>section div>a:first-of-type{ 
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-family: "Nexa XBold";
     padding: 1rem 1.25rem 1rem 1.25rem;
     font-size: 1rem;
@@ -747,25 +991,25 @@ aside div>a:first-of-type{
     width: max-content;
 }
 
-aside div>div:nth-of-type(2) {
+body>section div>div:nth-of-type(2) {
     display: none;
 }
 
-aside div>div:nth-of-type(3) {
+body>section div>div:nth-of-type(3) {
     display: none;
 }
 
-aside article {
+body>section article {
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
 
-aside article ul{
+body>section article ul{
     padding-right: 5rem;
     border-bottom: solid white 0.1rem;
 }
 
-aside::after{
+body>section::after{
     content: '';
 	position: absolute;
 	background-color: #00D66C;
@@ -779,6 +1023,107 @@ aside::after{
     margin-right: auto;
     bottom: -2rem;
     z-index: -1;
+}
+
+body>section.ammode{
+    background-color: #00D66C;
+}
+
+body>section.pmmode{
+    background-color: #2800A0;
+}
+
+
+body>section>div.nietingelogd {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+body>section>div.nietingelogd>h3 {
+    padding-bottom: 1rem;
+}
+
+body>section>div.nietingelogd>div>span {
+  position: relative;
+    display: inline-block;
+    margin-left: .5rem;
+}
+
+body>section>div.nietingelogd>div>span>button, body>section>div.nietingelogd>div>aside>button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../images/buttonup.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+}
+
+body>section>div.nietingelogd>div>span>button:nth-of-type(2), body>section>div.nietingelogd>div>aside>button:nth-of-type(2){
+    top: auto;
+    bottom: 1rem;
+    background-image: url(../images/buttondown.svg);
+}
+
+input[type=number]::-webkit-input-placeholder {
+    color: #00D66C
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body>section>div.nietingelogd>div>span>input[type="number"] {
+    border: none;
+    width: 3rem;
+    height: 8rem;
+    border-radius: .75rem;
+    font-family: "Nexa XBold"; 
+    font-size: 2rem;
+    background-color: white;
+    color: #00D66C; 
+    text-align:center;
+}
+
+body>section>div.nietingelogd>div>span:nth-of-type(3){
+   margin-left: 1rem;
+}
+
+body>section>div.nietingelogd>div>aside {
+    position: relative;
+    margin-left: 1rem;
+    display: inline-block;
+    background-color: white;
+    border-radius: .75rem;
+}
+
+body>section>div.nietingelogd p {
+    letter-spacing: 0;
+    width: auto;
+    padding: 3rem 0.5rem 3rem 0.5rem;
+    text-align: center;
+    background-color: white;
+    color: #00D66C;
+}
+
+body>section>div.nietingelogd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body>section>div.nietingelogd>a {
+    margin-top: 1rem;
+}
+
+.pmmode {
+    
 }
 
 /* FOOTER */
@@ -845,7 +1190,6 @@ body>footer li:nth-of-type(3){
     background-image: url(../images/facebookicon.svg);
 }
 
-
 body>footer a {
     font-size: 5px;
     color: transparent;
@@ -873,12 +1217,54 @@ body>footer a {
         margin-right: 1rem;
 }
     
+    form[action="filterandsort"]>div {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+}
+    
+    form[action="filterandsort"]>div fieldset {
+        box-sizing: border-box;
+        width: calc(50% - 0.5rem);
+    }
+    
     main div:nth-of-type(2)  {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: flex-start;
     }
+        
+    main.accountmain>section>div:nth-of-type(1), main.accountmain>section>div:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+    
+    main.accountmain>section>div {
+        width: calc(33% - 0.5rem);
+    }
+    
+    main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(2), main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(3) {
+        height: 50%;
+    }
+    
+    main.accountmain>section>div:nth-of-type(2) {
+        display: block;
+    }
+    
+    main.accountmain>section>div:nth-of-type(2)>img{
+        min-height: calc(70% + 1rem);
+    }
+    
+    main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(2), main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(3), main.accountmain>section>div:nth-of-type(3)>div, main.accountmain>section>div:nth-of-type(3)>img {
+        width: calc(50% - 0.5rem);
+    }
+ 
+    main.accountmain>section>div:nth-of-type(3)>img {
+        display: inline-block;
+}
     
     .leesbundels {
         display: flex;
@@ -911,16 +1297,16 @@ body>footer a {
         width: 50%;
     }
     
-    aside {
+    body>section {
          display: block;
     }
     
-    aside>div {
+    body>section>div {
         display: flex;
         justify-content:space-between;
     }
     
-    aside div>div:nth-of-type(2) {
+    body>section div>div:nth-of-type(2) {
     display: block;
 }
     
@@ -930,7 +1316,7 @@ body>footer a {
 
 @media (min-width: 65em){
     
-    body, header>div, aside>div, footer>div{
+    body, header>div, body>section>div, footer>div{
         max-width: 70rem;
         margin: 0 auto;
     }
@@ -949,6 +1335,14 @@ body>footer a {
         margin-right: 1rem;
 }
     
+    form[action="filterandsort"]>div {
+        flex-wrap: nowrap;
+}
+    
+    form[action="filterandsort"]>div fieldset {
+        width: auto;
+    }
+    
     main div:nth-of-type(1){
         display: flex;
         justify-content: space-between;
@@ -964,6 +1358,10 @@ body>footer a {
     main>div:nth-of-type(2)>article {
         width: calc(33% - 0.5rem);
     }
+    
+    main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(4), main.accountmain>section>div:nth-of-type(3)>div:nth-of-type(3) {
+    display: block;
+}
     
     .leesbundels section>div>article {
         width: calc(33% - 1rem);
@@ -981,16 +1379,14 @@ body>footer a {
     padding: 5rem 1rem 0rem 1rem;
 }
     
-    aside>div {
+    body>section>div {
         display: flex;
         justify-content:space-between;
     }
     
     
-    aside div>div:nth-of-type(3) {
+    body>section div>div:nth-of-type(3) {
     display: block;
 }
     
 }
-
-    

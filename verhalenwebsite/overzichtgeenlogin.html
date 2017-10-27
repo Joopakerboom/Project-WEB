@@ -12,7 +12,7 @@
 
     <header id="top">
         <div>
-           <img src="images/transavialogo.svg" alt="transavialogo">
+            <img src="images/transavialogo.svg" alt="transavialogo">
             <nav>
                 <ul>
                     <li><a href="index.html" class="selected">Home</a></li>
@@ -58,35 +58,35 @@
                 <input type="text" placeholder="Zoek uw verhaal">
             </form>
         </div>
-        <button id="kak" >zoek opties</button>
+        <button id="kak">zoek opties</button>
 
         <form action="filterandsort" class="dancer">
             <h3>Wat zoek je?</h3>
             <div>
-            <fieldset>
-                <legend>Sorteer op</legend>
-                <label> Comments <input name="sort" type="radio"> </label>
-                <label> Likes <input name="sort" type="radio"> </label>
-            </fieldset>
+                <fieldset>
+                    <legend>Sorteer op</legend>
+                    <label> Comments <input name="sort" type="radio"> </label>
+                    <label> Likes <input name="sort" type="radio"> </label>
+                </fieldset>
 
-            <fieldset>
-                <legend>Leestijd</legend>
-                <label> 5 min <input type="checkbox"> </label>
-                <label> 10 min <input type="checkbox"> </label>
-                <label> 15 + min <input type="checkbox"> </label>
-            </fieldset>
-            <fieldset>
-                <legend>Leesstijl</legend>
-                <label> Eerste persoon <input type="checkbox"> </label>
-                <label> Derde persoon <input type="checkbox"> </label>
-                <label> Beeldend <input type="checkbox"> </label>
-            </fieldset>
-            <fieldset>
-                <legend>Overig</legend>
-                <label> Sport <input type="checkbox"> </label>
-                <label> Bekende namen <input type="checkbox"> </label>
-                <label> Stemming <input type="checkbox"> </label>
-            </fieldset>
+                <fieldset>
+                    <legend>Leestijd</legend>
+                    <label> 5 min <input type="checkbox"> </label>
+                    <label> 10 min <input type="checkbox"> </label>
+                    <label> 15 + min <input type="checkbox"> </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Leesstijl</legend>
+                    <label> Eerste persoon <input type="checkbox"> </label>
+                    <label> Derde persoon <input type="checkbox"> </label>
+                    <label> Beeldend <input type="checkbox"> </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Overig</legend>
+                    <label> Sport <input type="checkbox"> </label>
+                    <label> Bekende namen <input type="checkbox"> </label>
+                    <label> Stemming <input type="checkbox"> </label>
+                </fieldset>
             </div>
             <button>Zoeken</button>
         </form>
@@ -193,129 +193,71 @@
         <a href="alleverhalen.html">Zie meer verhalen</a>
     </main>
 
-    <section>
-     
-     <div>
-      
-           <div>
-           <div>
-            <img src="images/flightwindowanimation.gif" alt="flightwindow">
-            </div>
+    <section class="ammode" id="inputtime">
+
+        <div class="nietingelogd">
+            <h3>Hoe laat vertrek je?</h3>
+
             <div>
-                <h3>Jouw vlucht <br> vertrekt over</h3>
-               <p id="hms">01:40:00</p>
-                <a href="tijdverhalen.html">Bekijk jouw verhalen</a>
+                <span>
+                <button id="up1"></button>
+                <input type="number" placeholder="0" id="hour1" min="0" max="1">
+                <button id="down1"></button> 
+                </span>
+                <span>
+                <button id="up2"></button>
+                <input type="number" placeholder="0" id="hour2" min="0" max="9">
+                <button id="down2"></button> 
+                </span>
+
+                <span>
+                <button id="up3"></button>
+                <input type="number" placeholder="0" id="minute1" min="0" max="6">
+                <button id="down3"></button> 
+                </span>
+                <span>
+                <button id="up4"></button>
+                <input type="number" placeholder="0" id="minute2" min="0" max="9">
+                <button id="down4"></button> 
+                </span>
+
+                <aside>
+                    <button id="AM"></button>
+                    <p id="amorpm">am</p>
+                    <button id="PM"></button>
+                </aside>
             </div>
-</div>
-       
-        <div>
-            <article>
-                <a href="99verrassing.html">
-                    <h4>88. Klumperbeven</h4>
-                </a>
-                <footer>
-                    <ul>
-                        <li>12</li>
-                        <li>22</li>
-                        <li>10m</li>
-                    </ul>
-                </footer>
-            </article>
 
-            <article>
-                <a href="99verrassing.html">
-                    <h4>75. Kinderboek</h4>
-                </a>
-                <footer>
-                    <ul>
-                        <li>24</li>
-                        <li>28</li>
-                        <li>5m</li>
-                    </ul>
-                </footer>
-            </article>
-
-            <article>
-                <a href="99verrassing.html">
-                    <h4>59. Terugspoelen</h4>
-                </a>
-                <footer>
-                    <ul>
-                        <li>5</li>
-                        <li>2</li>
-                        <li>5m</li>
-                    </ul>
-                </footer>
-            </article>
+            <a href="tijdverhalen.html">Bekijk jouw verhalen</a>
         </div>
 
-        <div>
-            <article>
-                <a href="99verrassing.html">
-                    <h4>53. Proces-verbaal</h4>
-                </a>
-                <footer>
-                    <ul>
-                        <li>4</li>
-                        <li>11</li>
-                        <li>10m</li>
-                    </ul>
-                </footer>
-            </article>
-
-            <article>
-                <a href="99verrassing.html">
-                    <h4>50. Gefrustreerd</h4>
-                </a>
-                <footer>
-                    <ul>
-                        <li>6</li>
-                        <li>33</li>
-                        <li>15m</li>
-                    </ul>
-                </footer>
-            </article>
-
-            <article>
-                <a href="99verrassing.html">
-                    <h4>38. Moe</h4>
-                </a>
-                <footer>
-                    <ul>
-                        <li>20</li>
-                        <li>23</li>
-                        <li>5m</li>
-                    </ul>
-                </footer>
-            </article>
-        </div>
-        </div>
     </section>
 
     <footer>
-       
-        <a href="#top"><img src="images/backtotopbutton.svg" alt="back tot top button"></a>
-<div>
-        <h3>transavia</h3>
 
-        <ul>
-            <li>
-                <a href="https://www.transavia.com/nl-NL/service/klantenservice/">Whatsapp</a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/transavia">
+        <a href="#top"><img src="images/backtotopbutton.svg" alt="back tot top button"></a>
+        <div>
+            <h3>transavia</h3>
+
+            <ul>
+                <li>
+                    <a href="https://www.transavia.com/nl-NL/service/klantenservice/">Whatsapp</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/transavia">
                     Youtube
                 </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/transavia">Facebook</a>
-            </li>
-        </ul>
-</div>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/transavia">Facebook</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
-<script src="js/sortfilter.js"></script>
-<script src="js/countdown.js"></script>
+    <script src="js/sortfilter.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/timepicker.js"></script>
 
 </body>
 
