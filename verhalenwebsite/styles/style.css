@@ -290,7 +290,7 @@ main>button:focus {
     color: white;
 }
 
-form[action="filterandsort"] label, form[action="inloggen"] label {
+form[action="filterandsort"] label, form[action="../overzicht.html"] label {
     display: block;
     padding-left: 2rem;
     padding-right: 3rem;
@@ -559,7 +559,7 @@ main.accountmain>section>div>div>h2, main.accountmain>section>div>div>p  {
     transform:translateX(-50%) translateY(-50%);
 }
 
-form[action="filterandsort"], form[action="inloggen"] {
+form[action="filterandsort"], form[action="../overzicht.html"] {
     border-radius: .75rem;
     background-color: rgba(255, 255, 255, 0.75);
     background-image: linear-gradient(
@@ -586,11 +586,11 @@ main.accountmain form:invalid {
  background-color: rgba(255, 255, 255, 0.75);
 }
 
-form[action="inloggen"] {
+form[action="../overzicht.html"] {
     margin-top: 3rem;
 }
 
-form[action="filterandsort"] h3, form[action="inloggen"] h3 {
+form[action="filterandsort"] h3, form[action="../overzicht.html"] h3 {
     border-radius: .75rem .75rem 0rem 0rem;
     padding: 2rem 2rem 1rem 2rem;
     background-color: white;
@@ -599,7 +599,7 @@ form[action="filterandsort"] h3, form[action="inloggen"] h3 {
     color: white;
 }
 
-form[action="filterandsort"] fieldset>legend, form[action="inloggen"] fieldset>legend {
+form[action="filterandsort"] fieldset>legend, form[action="../overzicht.html"] fieldset>legend {
     padding-left: 2rem;
     padding-top: 2rem;
     font-size: 1.5rem;
@@ -608,7 +608,7 @@ form[action="filterandsort"] fieldset>legend, form[action="inloggen"] fieldset>l
 }
 
 
-form[action="filterandsort"] label, form[action="inloggen"] label{
+form[action="filterandsort"] label, form[action="../overzicht.html"] label{
     position: relative;
     font-size: 1.2rem;
     font-family: "Nexa XBold";
@@ -650,7 +650,7 @@ form[action="filterandsort"] label>input:checked {
 
 
 
-form[action="inloggen"] label>input {
+form[action="../overzicht.html"] label>input {
     display: block;
     text-align: left;
     margin-top: 0.5rem;
@@ -664,16 +664,16 @@ form[action="inloggen"] label>input {
     
 }
 
-form[action="inloggen"] label>input:valid {
+form[action="../overzicht.html"] label>input:valid {
   border-color: #00D66C;
 } 
 
-form[action="inloggen"] label>input:invalid {
+form[action="../overzicht.html"] label>input:invalid {
   border-color: #ff3268;
   background-color: rgba(255, 50, 104, 0.10);
 }
 
-form[action="inloggen"] label>input:focus {
+form[action="../overzicht.html"] label>input:focus {
   transform: scale(1.02, 1.02);
 }
 
@@ -938,7 +938,7 @@ body>section{
     z-index: 1;
 }
 
-body>section>div:nth-of-type(1)>div:nth-of-type(1){
+body>section>div>div:nth-of-type(1){
     display: flex;
     margin-left: 1rem;
     max-width: 25rem;
@@ -991,6 +991,27 @@ body>section div>a:first-of-type{
     width: max-content;
 }
 
+body>section div>a:first-of-type.ambutton{ 
+ background-color: #2800A0;
+    box-shadow: inset 0 -0.1875em 0.0625em #120145;
+    transition: 2s;
+}
+
+body>section div>a:first-of-type.pmbutton{ 
+ background-color: #00d66c;
+    box-shadow: inset 0 -0.1875rem 0.0625rem #1e9162;
+}
+
+body>section div>a:first-of-type.pmbutton:focus, body>section div>a:first-of-type.pmbutton:hover {
+    background-color: #4de298;
+    transition: .2s;
+}
+
+body>section div>a:first-of-type.pmbutton:active {
+    background-color: #00c061;
+    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
+}
+
 body>section div>div:nth-of-type(2) {
     display: none;
 }
@@ -1012,7 +1033,7 @@ body>section article ul{
 body>section::after{
     content: '';
 	position: absolute;
-	background-color: #00D66C;
+	background-color: inherit;
     width:  10em;
 	height: 10em;
     transform: rotate(45deg);
@@ -1027,16 +1048,27 @@ body>section::after{
 
 body>section.ammode{
     background-color: #00D66C;
+    transition: 2s;
 }
 
 body>section.pmmode{
     background-color: #2800A0;
 }
 
-
 body>section>div.nietingelogd {
     padding-left: 1rem;
     padding-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+body>section>div.nietingelogd>div {
+    display: flex;
+    max-width: auto;
+    margin-left: 0rem;
 }
 
 body>section>div.nietingelogd>h3 {
@@ -1044,9 +1076,9 @@ body>section>div.nietingelogd>h3 {
 }
 
 body>section>div.nietingelogd>div>span {
-  position: relative;
+    position: relative;
     display: inline-block;
-    margin-left: .5rem;
+    margin-right: .5rem;
 }
 
 body>section>div.nietingelogd>div>span>button, body>section>div.nietingelogd>div>aside>button {
@@ -1065,11 +1097,43 @@ body>section>div.nietingelogd>div>span>button, body>section>div.nietingelogd>div
     background-size: 1rem;
 }
 
+body>section>div.nietingelogd>div>aside>button {
+    background-image: url(../images/buttonupwhite.svg);
+}
+
+/*
+body>section>div.nietingelogd>div>span>button.pmarrowup, body>section>div.nietingelogd>div>aside>button.pmarrowup {
+    background-image: url(../images/buttonupblue.svg);
+    
+}
+*/
+
 body>section>div.nietingelogd>div>span>button:nth-of-type(2), body>section>div.nietingelogd>div>aside>button:nth-of-type(2){
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
     top: auto;
     bottom: 1rem;
     background-image: url(../images/buttondown.svg);
 }
+
+body>section>div.nietingelogd>div>aside>button:nth-of-type(2) {
+    background-image: url(../images/buttondownwhite.svg);
+}
+
+/*
+body>section>div.nietingelogd>div>span>button:nth-of-type(2).amarrowdown, body>section>div.nietingelogd>div>aside>button:nth-of-type.pmarrowdown(2) {
+    background-image: url(../images/buttondown.svg);
+}
+*/
 
 input[type=number]::-webkit-input-placeholder {
     color: #00D66C
@@ -1079,9 +1143,14 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-body>section>div.nietingelogd>div>span>input[type="number"] {
+input[type=number] {
+    pointer-events:none;
+}
+
+body>section>div.nietingelogd>div>span>input[type="number"].amtext {
     border: none;
-    width: 3rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     height: 8rem;
     border-radius: .75rem;
     font-family: "Nexa XBold"; 
@@ -1089,6 +1158,11 @@ body>section>div.nietingelogd>div>span>input[type="number"] {
     background-color: white;
     color: #00D66C; 
     text-align:center;
+    transition: 2s;
+}
+
+body>section>div.nietingelogd>div>span>input[type="number"].pmtext1 {
+    color: #2800A0;
 }
 
 body>section>div.nietingelogd>div>span:nth-of-type(3){
@@ -1099,7 +1173,6 @@ body>section>div.nietingelogd>div>aside {
     position: relative;
     margin-left: 1rem;
     display: inline-block;
-    background-color: white;
     border-radius: .75rem;
 }
 
@@ -1108,23 +1181,14 @@ body>section>div.nietingelogd p {
     width: auto;
     padding: 3rem 0.5rem 3rem 0.5rem;
     text-align: center;
-    background-color: white;
-    color: #00D66C;
-}
-
-body>section>div.nietingelogd {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    color: white;
 }
 
 body>section>div.nietingelogd>a {
+    display: inline-block;
     margin-top: 1rem;
 }
 
-.pmmode {
-    
-}
 
 /* FOOTER */
 
@@ -1133,7 +1197,10 @@ body>footer {
     width: 100vw;
     left: 50%;
     margin-left: -50vw;
-    background-color: #F7F7F7;  
+    background-color: #F7F7F7; 
+}
+
+body>footer.accountfooter {
     z-index: -2;
 }
 
@@ -1159,8 +1226,7 @@ body>footer h3 {
 body>footer div {
  position: relative;
  margin-top: 5rem;
-    padding-bottom: 1rem;
-
+ padding-bottom: 1rem;
 }
 
 body>footer ul{
@@ -1304,6 +1370,10 @@ body>footer a {
     body>section>div {
         display: flex;
         justify-content:space-between;
+    }
+    
+    body>section>div.nietingelogd {
+        justify-content:center;
     }
     
     body>section div>div:nth-of-type(2) {

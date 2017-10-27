@@ -78,16 +78,38 @@ buttonDownFour.addEventListener('click', aftellenMinuteTwo);
 
 // AM/ PM PICKER
 
-var textArray=['pm', 'am'];
+var amOrPmText=['pm', 'am'];
 var buttonAm = document.getElementById("AM");
 var buttonPm = document.getElementById("PM");
 var timeSection = document.getElementById("inputtime");
+var timeColorOne = document.getElementById("hour1");
+var timeColorTwo = document.getElementById("hour2");
+var timeColorThree = document.getElementById("minute1");
+var timeColorFour = document.getElementById("minute2");
+//var timeArrowUp = document.querySelectorAll(".amarrowup");
+//var timeArrowDown = document.querySelector(".amarrowdown");
+var timeButton = document.querySelector(".ambutton");
+
+//var i=0;
+//var currentTimeArrowUp = timeArrowUp[i];
 
 function AmToPm() {
-    var value = textArray.shift();
-    textArray.push(value);
+    var value = amOrPmText.shift();
+    amOrPmText.push(value);
     document.getElementById("amorpm").innerHTML=value;
     timeSection.classList.toggle('pmmode');
+    timeColorOne.classList.toggle('pmtext1');
+    timeColorTwo.classList.toggle('pmtext1');
+    timeColorThree.classList.toggle('pmtext1');
+    timeColorFour.classList.toggle('pmtext1');
+    
+//    for(i; i< timeArrowUp.length; i++){
+//       var currentTimeArrowUp = timeArrowUp[i];
+//     currentTimeArrowUp.classList.toggle('pmarrowup');
+//}
+   
+    //timeArrowDown.classList.toggle('pmarrowdown');
+    timeButton.classList.toggle('pmbutton');
 }
 
 buttonAm.addEventListener('click', AmToPm);
