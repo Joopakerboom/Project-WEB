@@ -62,7 +62,7 @@ html {
     }
 
 html.leesbundelsbackground {
-        background-color: #00D66C;
+        background-color: #FF3268;
     }
 
 h1, h2, h3, h4 {
@@ -255,7 +255,6 @@ main div input[type="text"] {
 
 main div input[type="text"]:focus {
     border-radius: 3rem;
-    background-color: #5E40B8;
     transition: .5s;
     width: 10rem;
 }
@@ -280,14 +279,11 @@ main>button{
     padding: 1rem 1rem 1rem 3rem;
     font-size: 1rem;
     border: none;
-    margin-bottom: 0.5rem;
     transition: .5s;
 }
 
-main>button:focus {
-    background: url(../images/exitbutton.svg) no-repeat left;
-    background-size: 2.5rem;
-    color: white;
+main>button:hover, main>button:focus {
+    padding-left: 3.5rem;
 }
 
 form[action="filterandsort"] label, form[action="../overzicht.html"] label {
@@ -319,6 +315,7 @@ main article {
     margin-top: 1rem;
     border-radius: .75rem;
     color: white;
+    background-color: #00D66C;
     background-image: linear-gradient(
     to top,
     rgba(255, 255, 255, 1) 1em,
@@ -327,14 +324,22 @@ main article {
 }
 
 main article h3 {
-    border-radius: .75rem .75rem 0rem 0rem;
     padding: 2rem 2rem 0rem 2rem;
-    background-color: #00D66C;
 }
 
 main article footer {
     padding: 0rem 2rem 0rem 2rem;
     background-color: #00D66C;
+}
+
+main>div:nth-of-type(2)>article>a {
+    display: inline-block;
+    width: 100%;
+     transition: .5s;
+}
+
+main>div:nth-of-type(2)>article>a:hover, main>div:nth-of-type(2)>article>a:focus  {
+    padding-left: 0.5rem;
 }
 
 article a {
@@ -574,12 +579,13 @@ form[action="filterandsort"], form[action="../overzicht.html"] {
 
 form[action="filterandsort"].dancer {
     display: none;
-    transition: 5s;
 }
 
 form[action="filterandsort"].swag {
     display: block;
     max-width: 100%; 
+    margin-top: 1rem;
+    position: relative;
 }
 
 main.accountmain form:invalid {
@@ -597,6 +603,18 @@ form[action="filterandsort"] h3, form[action="../overzicht.html"] h3 {
     color: #00D66C;
      background-color: #00D66C;
     color: white;
+}
+
+form[action="filterandsort"] img {
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+    width: 2rem;
+    transition: .2s;
+}
+
+form[action="filterandsort"] img:hover{
+    transform: scale(1.2, 1.2);
 }
 
 form[action="filterandsort"] fieldset>legend, form[action="../overzicht.html"] fieldset>legend {
@@ -661,7 +679,6 @@ form[action="../overzicht.html"] label>input {
     font-family: "Nexa Regular";
     font-size:1rem;
     transition:all .2s;
-    
 }
 
 form[action="../overzicht.html"] label>input:valid {
@@ -736,6 +753,14 @@ main.accountmain>p>a {
     padding-left: 0.5rem;
 }
 
+main.accountmain>img {
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    width: 14.3rem;
+    display: none;
+}
+
 .accountmain::after {
     content: '';
 	position: absolute;
@@ -756,7 +781,7 @@ main.accountmain>p>a {
 
 main.leesbundels {
     padding: 0;
-   background-color: #00D66C;
+   background-color: #FF3268;
     /*
     position: relative;
     width: 100vw;
@@ -766,7 +791,7 @@ main.leesbundels {
 }
 
 .leesbundels section {
-    background-color: #00D66C;
+    background-color: #FF3268;
     background-image: none;
     margin-top: 0;
     border-radius: 0;
@@ -787,10 +812,17 @@ main.leesbundels {
     padding: 5rem 1rem 0rem 1rem;
 }
 
+.leesbundels section:nth-of-type(2) {
+    background-color: #00D66C;
+}
+
+.leesbundels section:nth-of-type(3) {
+    background-color: #F3E5D8;
+}
+
 .leesbundels h3 {
     border-radius:0;
     padding-top: 0;
-    background-color: #00D66C;
     margin-bottom: 0.5rem;
 }
 
@@ -849,6 +881,18 @@ main.leesbundels {
     visibility: hidden;
 }
 
+.leesbundels section>div:nth-of-type(2)>img {
+    position: absolute;
+    right: 0;
+    top: -1rem;
+    width: 2rem;
+    transition: .2s;
+}
+
+.leesbundels section>div:nth-of-type(2)>img:hover{
+    transform: scale(1.2, 1.2);
+}
+
 .leesbundels section>div:nth-of-type(2).dancing {
     margin-top: 0rem;
     transition: .5s;
@@ -856,6 +900,9 @@ main.leesbundels {
     animation: leesbundelinhoud 1s;
     transition-timing-function: ease;
     animation-fill-mode: forwards;
+}
+
+leesbundels section>div:nth-of-type(2) {
 }
 
 .leesbundels section>div:nth-of-type(2)::before {
@@ -883,7 +930,6 @@ main.leesbundels {
     left: 2.5rem; 
     top: 0.1rem;
     z-index: 1;
-
 }
 
 .leesbundels section>div>article {
@@ -922,6 +968,85 @@ main.leesbundels {
 
 .leesbundels section>div>article h4, .leesbundels div>article li  {
     color: #202020;
+}
+
+
+main.twitter {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 0rem;
+    z-index: 0;
+}
+
+main.twitter>button {
+    background-image: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 8rem;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+main.twitter img {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    z-index: -1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#rp-bar{
+	width: 100%;
+	top: 0;
+	right: 0;
+	position: fixed;
+    z-index: 0;
+}
+#rp-bar div {
+	height: 100%;
+	float:left;
+	position: relative;
+}
+
+#rp-read{
+	background-color: #FF3268;
+}
+
+@keyframes bookmarkcheck {
+    from {background-image: url(../images/progressbuttonblank.svg);}
+    to {background-image: url(../images/progressbuttoncheck.svg);}
+}
+
+#rp-read::after{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: -1.5rem;
+    background-image: url(../images/progressbuttonblank.svg);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-color: transparent;
+    animation-name: bookmarkcheck;
+    animation-delay: 10s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#rp-unread{
+	background-color: #606060;
 }
 
 /* VLUCHT TIJD */
@@ -1097,43 +1222,37 @@ body>section>div.nietingelogd>div>span>button, body>section>div.nietingelogd>div
     background-size: 1rem;
 }
 
+body>section>div.nietingelogd>div>span>button:hover,
+body>section>div.nietingelogd>div>span>button:focus {
+    background-image: url(../images/buttonuppink.svg);
+}
+
+body>section>div.nietingelogd>div>span>button:nth-of-type(2), body>section>div.nietingelogd>div>aside>button:nth-of-type(2){
+    top: auto;
+    bottom: 1rem;
+    background-image: url(../images/buttondown.svg);
+}
+
+body>section>div.nietingelogd>div>span>button:nth-of-type(2):hover,
+body>section>div.nietingelogd>div>span>button:nth-of-type(2):focus {
+    background-image: url(../images/buttondownpink.svg);
+}
+
 body>section>div.nietingelogd>div>aside>button {
     background-image: url(../images/buttonupwhite.svg);
 }
 
-/*
-body>section>div.nietingelogd>div>span>button.pmarrowup, body>section>div.nietingelogd>div>aside>button.pmarrowup {
+body>section>div.nietingelogd>div>aside>button:hover, body>section>div.nietingelogd>div>aside>button:focus {
     background-image: url(../images/buttonupblue.svg);
-    
-}
-*/
-
-body>section>div.nietingelogd>div>span>button:nth-of-type(2), body>section>div.nietingelogd>div>aside>button:nth-of-type(2){
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-appearance: none;
-    border: none;
-    background-color: transparent;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1rem;
-    top: auto;
-    bottom: 1rem;
-    background-image: url(../images/buttondown.svg);
 }
 
 body>section>div.nietingelogd>div>aside>button:nth-of-type(2) {
     background-image: url(../images/buttondownwhite.svg);
 }
 
-/*
-body>section>div.nietingelogd>div>span>button:nth-of-type(2).amarrowdown, body>section>div.nietingelogd>div>aside>button:nth-of-type.pmarrowdown(2) {
-    background-image: url(../images/buttondown.svg);
-}
-*/
+body>section>div.nietingelogd>div>aside>button:nth-of-type(2):hover, body>section>div.nietingelogd>div>aside>button:nth-of-type(2):focus {
+    background-image: url(../images/buttondownblue.svg);
+} 
 
 input[type=number]::-webkit-input-placeholder {
     color: #00D66C
@@ -1344,7 +1463,11 @@ body>footer a {
     
     .leesbundels section:nth-of-type(2) {
     padding: 5rem 1rem 0rem 1rem;
+        background-color: #FF3268;
 }
+    main.leesbundels {
+        background-color: #F3E5D8;
+    }
     
     main>div:nth-of-type(2)>article {
         width: calc(50% - 0.5rem);
@@ -1379,6 +1502,10 @@ body>footer a {
     body>section div>div:nth-of-type(2) {
     display: block;
 }
+    
+    main.twitter>img:nth-of-type(1){
+        content: url('../images/twitter01desktop.png');
+    }
     
 }
 
@@ -1432,6 +1559,9 @@ body>footer a {
     main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(4), main.accountmain>section>div:nth-of-type(3)>div:nth-of-type(3) {
     display: block;
 }
+    main.accountmain>img {
+        display: block;
+    }
     
     .leesbundels section>div>article {
         width: calc(33% - 1rem);
@@ -1447,7 +1577,12 @@ body>footer a {
     
     .leesbundels section:nth-of-type(3) {
     padding: 5rem 1rem 0rem 1rem;
+        background-color: #FF3268;
 }
+    
+    main.leesbundels {
+        background-color: #FF3268;
+    }
     
     body>section>div {
         display: flex;

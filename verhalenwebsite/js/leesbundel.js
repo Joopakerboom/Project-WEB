@@ -3,6 +3,7 @@
 /* 1. selecteer elementen met document.querySelector */
 var section = document.querySelector('div.dancer'); // first section element
 var button = document.getElementById("kak");
+var closeButton = document.getElementById("closebutton");
 
 var dance = function () {
   /* 3. toggle een class op een element, dit triggert een CSS Transition (zie CSS: section.dance) */
@@ -11,3 +12,4 @@ var dance = function () {
 
 /* 2. voeg een event toe aan een element */
 button.addEventListener('click', dance);
+closeButton.addEventListener('click', dance);

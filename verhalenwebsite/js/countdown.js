@@ -1,5 +1,7 @@
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 
+/* BRON GERAADPLEEGD VAN: http://navaneeth.me/simple-countdown-timer-using-javascript/#.WfTzwhOCz-m */
+
 var timeoutHandle;
     function count() {
 

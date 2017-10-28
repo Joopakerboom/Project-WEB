@@ -102,13 +102,6 @@ function AmToPm() {
     timeColorTwo.classList.toggle('pmtext1');
     timeColorThree.classList.toggle('pmtext1');
     timeColorFour.classList.toggle('pmtext1');
-    
-//    for(i; i< timeArrowUp.length; i++){
-//       var currentTimeArrowUp = timeArrowUp[i];
-//     currentTimeArrowUp.classList.toggle('pmarrowup');
-//}
-   
-    //timeArrowDown.classList.toggle('pmarrowdown');
     timeButton.classList.toggle('pmbutton');
 }
 
