@@ -180,6 +180,26 @@ header::after{
     z-index: -1;
 }
 
+header.verhaaldetail {
+    background-color: #00D66C;
+}
+
+header.verhaaldetail h1 {
+    color: white;
+}
+
+header.verhaaldetail nav a {
+    color: white;
+}
+
+header.verhaaldetail footer {
+    margin-left: 5rem;
+}
+
+header.verhaaldetail::after {
+    background-color: #00D66C;
+}
+
 
 body div>section:nth-of-type(-n+3) {
     background-image: url(../images/vliegtuiguitzicht2.png);
@@ -327,9 +347,13 @@ main article h3 {
     padding: 2rem 2rem 0rem 2rem;
 }
 
-main article footer {
+main article footer, header.verhaaldetail footer {
     padding: 0rem 2rem 0rem 2rem;
     background-color: #00D66C;
+}
+
+header.verhaaldetail footer {
+    padding-left: 0rem;
 }
 
 main>div:nth-of-type(2)>article>a {
@@ -347,26 +371,26 @@ article a {
 }
 
 
-article li {
+article li, header.verhaaldetail>div>footer>ul>li {
     display: inline-block;
     margin-right: 1rem;
 }
 
-article li:nth-last-of-type(3) {
+article li:nth-last-of-type(3), header.verhaaldetail>div>footer>ul>li:nth-last-of-type(3) {
     background: url(../images/comment.svg) no-repeat left;
     background-size: 1.2rem;
     padding: 1rem 0rem 1rem 1.5rem;
     color: white;
 }
 
-article li:nth-last-of-type(2) {
+article li:nth-last-of-type(2), header.verhaaldetail>div>footer>ul>li:nth-last-of-type(2) {
     background: url(../images/like.svg) no-repeat left;
     background-size: 1.2rem;
     padding: 1rem 0rem 1rem 1.5rem;
     color: white;
 }
 
-article li:nth-last-of-type(1) {
+article li:nth-last-of-type(1), header.verhaaldetail>div>footer>ul>li:nth-last-of-type(1) {
     background: url(../images/time.svg) no-repeat left;
     background-size: 1.2rem;
     padding: 1rem 0rem 1rem 1.5rem;
@@ -971,13 +995,14 @@ leesbundels section>div:nth-of-type(2) {
 }
 
 
-main.twitter {
+main.twitter, main.zombie, main.haiku {
     position: relative;
     width: 100vw;
     left: 50%;
     margin-left: -50vw;
     padding: 0rem;
     z-index: 0;
+    background-color: white;
 }
 
 main.twitter>button {
@@ -1006,6 +1031,27 @@ main.twitter img {
     top: 0;
 }
 
+main.zombie img {
+    width: 100vw;
+    top: 0;
+}
+
+main.zombie img:nth-of-type(2){
+    position: fixed;
+    top: 5rem;
+    z-index: -1;
+}
+
+main.haiku img {
+    width: 100%;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+    object-fit: cover;
+    z-index: -1;
+}
+
 #rp-bar{
 	width: 100%;
 	top: 0;
@@ -1023,9 +1069,45 @@ main.twitter img {
 	background-color: #FF3268;
 }
 
+
 @keyframes bookmarkcheck {
-    from {background-image: url(../images/progressbuttonblank.svg);}
-    to {background-image: url(../images/progressbuttoncheck.svg);}
+    0% {
+        transform: scale(1.0, 1.0);
+}
+    50% {
+        transform: scale(1.2, 1.2);
+        content: url('../images/progressbuttoncheck.svg');
+}
+    100% {
+        transform: scale(1.0, 1.0); 
+        content: url('../images/progressbuttoncheck.svg');
+}
+}
+
+main.zombie>div>img.bookmark {
+    position: fixed;
+    left: 65%;
+    top: 1rem;
+    width: 3rem;
+    opacity: 0;
+}
+
+main.zombie>div>img.bookmarkcheck {
+    opacity: 1;
+    animation-name: bookmarkcheck;
+    animation-delay: .2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+main.zombie>button{
+    position: fixed;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+    left: 65%;
+    background-image:none ;
+    
 }
 
 #rp-read::after{
@@ -1039,10 +1121,6 @@ main.twitter img {
     background-repeat: no-repeat;
     background-size: 3rem;
     background-color: transparent;
-    animation-name: bookmarkcheck;
-    animation-delay: 10s;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
 }
 
 #rp-unread{
@@ -1503,10 +1581,42 @@ body>footer a {
     display: block;
 }
     
+    main.haiku img {
+        width: 100vw;
+        height: auto;
+    }
+    
     main.twitter>img:nth-of-type(1){
         content: url('../images/twitter01desktop.png');
     }
     
+    main.haiku>img:nth-of-type(1){
+        content: url('../images/haiku01desktop.png');
+    }
+    
+    main.haiku>img:nth-of-type(2){
+        content: url('../images/haiku02desktop.png');
+    }
+    
+    main.haiku>img:nth-of-type(3){
+        content: url('../images/haiku03desktop.png');
+    }
+    
+    main.haiku>img:nth-of-type(4){
+        content: url('../images/haiku04desktop.png');
+    }
+    
+    main.haiku>img:nth-of-type(5){
+        content: url('../images/haiku05desktop.png');
+    }
+    
+    main.haiku>img:nth-of-type(6){
+        content: url('../images/haiku06desktop.png');
+    }
+    
+    main.zombie>img:nth-of-type(1){
+        content: url('../images/zombie01desktop.png');
+    }
 }
 
 /* MEDIA QUERIES DESKTOP */
