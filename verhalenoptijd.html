@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verhalen op tijd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header id="top">
+        <div>
+           <img src="images/transavialogo.svg" alt="transavialogo">
+            <nav>
+                <ul>
+                    <li><a href="overzicht.html" class="selected">Home</a></li>
+                    <li><a href="leesbundels.html">Leesbundels</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/homeshape.svg" alt="homeicon">
+            <h1>Verhalen op tijd</h1>
+        </div>
+    </header>
+
+    <main class="verhalenoptijd">
+        <div>
+            <p id="hms">01:40:00</p>
+        </div>
+        <button id="sortfilterbutton" >zoek opties</button>
+
+        <form action="filterandsort" class="sortfilter">
+            <h3>Wat zoek je?</h3>
+            <img id="closebutton" src="images/exitbuttonblue.svg" alt="exitfilterbutton">
+            <div>
+            <fieldset>
+                <legend>Sorteer op</legend>
+                <label> Comments <input name="sort" type="radio"> </label>
+                <label> Likes <input name="sort" type="radio" checked="checked"> </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Leestijd</legend>
+                <label> 5 min <input type="checkbox"> </label>
+                <label> 10 min <input type="checkbox"> </label>
+                <label> 15 + min <input type="checkbox"> </label>
+            </fieldset>
+            <fieldset>
+                <legend>Leesstijl</legend>
+                <label> Eerste persoon <input type="checkbox"> </label>
+                <label> Derde persoon <input type="checkbox"> </label>
+                <label> Beeldend <input type="checkbox"> </label>
+            </fieldset>
+            <fieldset>
+                <legend>Overig</legend>
+                <label> Sport <input type="checkbox"> </label>
+                <label> Bekende namen <input type="checkbox"> </label>
+                <label> Stemming <input type="checkbox"> </label>
+            </fieldset>
+            </div>
+            <a href="#articlescroll">Zoeken</a>
+        </form>
+
+        <div id="articlescroll">
+            <article>
+                <a href="89zombie.html">
+                    <h3>89. Zombie</h3>
+                </a>
+                <footer>
+                    <ul>
+                        <li>22</li>
+                        <li>51</li>
+                        <li>15m</li>
+                    </ul>
+                </footer>
+                <img src="images/zombiepreview.png" alt="zombiepreview">
+                <button>mijn lijst</button>
+                <button>download</button>
+            </article>
+
+            <article>
+                <a href="47haiku.html">
+                    <h3>47. Haiku</h3>
+                </a>
+                <footer>
+                    <ul>
+                        <li>12</li>
+                        <li>43</li>
+                        <li>5m</li>
+                    </ul>
+                </footer>
+                <img src="images/haikupreview.png" alt="haikupreview">
+                <button>mijn lijst
+            </button>
+                <button>download</button>
+            </article>
+
+            <article>
+                <a href="verhaal.html">
+                    <h3>71. Vrijdag de 13e</h3>
+                </a>
+                <footer>
+                    <ul>
+                        <li>17</li>
+                        <li>39</li>
+                        <li>5m</li>
+                    </ul>
+                </footer>
+                <img src="images/vrijdagde13epreview.jpeg" alt="vrijdagde13epreview">
+                <button>mijn lijst</button>
+                <button>download</button>
+            </article>
+
+            <article>
+                <a href="08twitter.html">
+                    <h3>08. Twitter</h3>
+                </a>
+                <footer>
+                    <ul>
+                        <li>11</li>
+                        <li>35</li>
+                        <li>15m</li>
+                    </ul>
+                </footer>
+                <img src="images/twitterpreview.png" alt="twitterpreview">
+                <button>mijn lijst</button>
+                <button>download</button>
+            </article>
+
+            <article>
+                <a href="verhaal.html">
+                    <h3>96. Steenkolenfrans</h3>
+                </a>
+                <footer>
+                    <ul>
+                        <li>24</li>
+                        <li>34</li>
+                        <li>5m</li>
+                    </ul>
+                </footer>
+                <img src="images/steenkolenfranspreview.png" alt="steenkolenfranspreview">
+                <button>mijn lijst</button>
+                <button>download</button>
+            </article>
+
+            <article>
+                <a href="verhaal.html">
+                    <h3>90. Telegrafisch</h3>
+                </a>
+                <footer>
+                    <ul>
+                        <li>10</li>
+                        <li>30</li>
+                        <li>5m</li>
+                    </ul>
+                </footer>
+                <img src="images/telgrafischpreview.png" alt="telegrafischpreview">
+                <button>mijn lijst</button>
+                <button>download</button>
+            </article>
+        </div>
+
+        <a href="alleverhalen.html">Zie meer verhalen</a>
+    </main>
+
+    <footer>
+       
+        <a href="#top"><img src="images/backtotopbutton.svg" alt="back tot top button"></a>
+<div>
+        <h3>transavia</h3>
+
+        <ul>
+            <li>
+                <a href="https://www.transavia.com/nl-NL/service/klantenservice/">Whatsapp</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/transavia">
+                    Youtube
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/transavia">Facebook</a>
+            </li>
+        </ul>
+</div>
+    </footer>
+
+<script src="js/sortfilter.js"></script>
+<script src="js/countdown.js"></script>
+
+</body>
+
+</html>
