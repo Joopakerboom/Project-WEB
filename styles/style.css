@@ -313,7 +313,7 @@ main>button:hover, main>button:focus {
     padding-left: 3.5rem;
 }
 
-form[action="filterandsort"] label, form[action="../overzicht.html"] label {
+form[action="filterandsort"] label, form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label {
     display: block;
     padding-left: 2rem;
     padding-right: 3rem;
@@ -595,7 +595,7 @@ main.accountmain>section>div>div>h2, main.accountmain>section>div>div>p  {
     transform:translateX(-50%) translateY(-50%);
 }
 
-form[action="filterandsort"], form[action="../overzicht.html"] {
+form[action="filterandsort"], form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] {
     border-radius: .75rem;
     background-color: rgba(255, 255, 255, 0.75);
     background-image: linear-gradient(
@@ -623,11 +623,11 @@ main.accountmain form:invalid {
  background-color: rgba(255, 255, 255, 0.75);
 }
 
-form[action="../overzicht.html"] {
+form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] {
     margin-top: 3rem;
 }
 
-form[action="filterandsort"] h3, form[action="../overzicht.html"] h3 {
+form[action="filterandsort"] h3, form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] h3 {
     border-radius: .75rem .75rem 0rem 0rem;
     padding: 2rem 2rem 1rem 2rem;
     background-color: white;
@@ -648,7 +648,7 @@ form[action="filterandsort"] img:hover{
     transform: scale(1.2, 1.2);
 }
 
-form[action="filterandsort"] fieldset>legend, form[action="../overzicht.html"] fieldset>legend {
+form[action="filterandsort"] fieldset>legend, form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] fieldset>legend {
     padding-left: 2rem;
     padding-top: 2rem;
     font-size: 1.5rem;
@@ -657,7 +657,7 @@ form[action="filterandsort"] fieldset>legend, form[action="../overzicht.html"] f
 }
 
 
-form[action="filterandsort"] label, form[action="../overzicht.html"] label{
+form[action="filterandsort"] label, form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label{
     position: relative;
     font-size: 1.2rem;
     font-family: "Nexa XBold";
@@ -697,7 +697,7 @@ form[action="filterandsort"] label>input:checked {
     background-size: 1.2rem;
 }
 
-form[action="../overzicht.html"] label>input {
+form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label>input {
     display: block;
     text-align: left;
     margin-top: 0.5rem;
@@ -710,16 +710,16 @@ form[action="../overzicht.html"] label>input {
     transition:all .2s;
 }
 
-form[action="../overzicht.html"] label>input:valid {
+form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label>input:valid {
   border-color: #00D66C;
 } 
 
-form[action="../overzicht.html"] label>input:invalid {
+form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label>input:invalid {
   border-color: #ff3268;
   background-color: rgba(255, 50, 104, 0.10);
 }
 
-form[action="../overzicht.html"] label>input:focus {
+form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label>input:focus {
   transform: scale(1.02, 1.02);
 }
 
@@ -806,49 +806,55 @@ main.accountmain>img {
     z-index: -1;
 }
 
-main.accountmain>section:nth-last-of-type(-n+2){
+main.jouwaccount {
+    padding: 6rem 1rem 3rem 1rem;
+}
+
+main.jouwaccount>section:nth-last-of-type(-n+2){
   display: block;
     height: auto;
 }
 
-main.accountmain>section:nth-last-of-type(-n+1)>div {
+main.jouwaccount>section:nth-last-of-type(-n+1)>div {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
 }
 
-main.accountmain>section:nth-last-of-type(-n+2)>h2{
+main.jouwaccount>section:nth-last-of-type(-n+2)>h2{
     color: #00D66C;
     margin-left: 0rem;
     padding-bottom: 1rem;
     border-bottom: 0.5rem solid #00D66C;
 }
 
-main.accountmain>section:nth-last-of-type(-n+1)>h2 {
+main.jouwaccount>section:nth-last-of-type(-n+1)>h2 {
+    margin-top: 3rem;
     color: #2800A0;
     border-bottom: 0.5rem solid #2800A0;
 }
 
-main.accountmain>section:nth-last-of-type(-n+2)>p {
+main.jouwaccount>section:nth-last-of-type(-n+2)>p {
     margin-left: 2rem;
     line-height: 1.5;
 }
 
-main.accountmain>section:nth-last-of-type(-n+2)>p>a{
+main.jouwaccount>section:nth-last-of-type(-n+2)>p>a{
     color: #00D66C;
     transition: .5s;
 }
 
-main.accountmain>section:nth-last-of-type(-n+1)>p>a {
+main.jouwaccount>section:nth-last-of-type(-n+1)>p>a {
     color: #2800A0;
 }
 
-main.accountmain>section:nth-last-of-type(-n+2)>p>a:hover, main.accountmain>section:nth-last-of-type(-n+2)>p>a:focus {
+main.jouwaccount>section:nth-last-of-type(-n+2)>p>a:hover, main.jouwaccount>section:nth-last-of-type(-n+2)>p>a:focus {
     padding-left: 0.5rem;
     color: #4DE298;
 }
 
-main.accountmain>section:nth-last-of-type(-n+1)>p>a:hover, main.accountmain>section:nth-last-of-type(-n+1)>p>a:focus {
+main.jouwaccount>section:nth-last-of-type(-n+1)>p>a:hover, main.jouwaccount>section:nth-last-of-type(-n+1)>p>a:focus {
     color: #5E40B8;
 }
 
@@ -1731,7 +1737,7 @@ body>footer a {
         background-color: #F3E5D8;
     }
     
-    main>div:nth-of-type(2)>article, main.accountmain>section:nth-last-of-type(-n+1)>div>article {
+    main>div:nth-of-type(2)>article, main.jouwaccount>section:nth-last-of-type(-n+1)>div>article {
         width: calc(50% - 0.5rem);
     }
     
@@ -1911,7 +1917,7 @@ body>footer a {
         align-items: flex-start;
     }
     
-    main>div:nth-of-type(2)>article {
+    main>div:nth-of-type(2)>article, main.jouwaccount>section:nth-last-of-type(-n+1)>div>article {
         width: calc(33% - 0.5rem);
     }
     
@@ -1922,7 +1928,7 @@ body>footer a {
         display: block;
     }
     
-    .leesbundels section>div>article, main.accountmain>section:nth-last-of-type(-n+1)>div>article {
+    .leesbundels section>div>article {
         width: calc(33% - 1rem);
     }
     
