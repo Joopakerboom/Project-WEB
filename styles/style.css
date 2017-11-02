@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+/* JOOP AKERBOOM, KLAS 201, DONDERDAG 2 NOVEMBER 2017 */
+
+/* ALGEMENE STUFF */
+
 @font-face {
     font-family: "Nexa XBold";
     src: url(../fonts/Nexa-XBold.otf);
@@ -101,6 +105,8 @@ a>h3 {
    text-decoration: none; 
 }
 
+/* HEADER */
+
 header { 
     width: 100vw;
     height: 20rem;
@@ -149,14 +155,14 @@ nav>ul>li>a:hover, nav>ul>li>a:focus {
 }
 
 nav a.selected {
-   color: #2800A0;
+    color: #2800A0;
     border-bottom: 0.1rem solid #2800A0;
 }
 
  header h1 {
     margin-top: 4rem;
     margin-left: 5rem;
-     padding-right: 1rem;
+    padding-right: 1rem;
 } 
 
 header img:last-of-type {
@@ -200,6 +206,7 @@ header.verhaaldetail::after {
     background-color: #00D66C;
 }
 
+/* UITGELICHT/ LEES VERDER SECTIE */
 
 body div>section:nth-of-type(-n+3) {
     background-image: url(../images/twitterpreview.png);
@@ -234,7 +241,6 @@ body div>section:nth-of-type(-n+3) div{
 body div>section:nth-of-type(2) {
     display: none;
     background-image: url(../images/haikupreview.png);
-
 }
 
 body div>section:nth-of-type(3) {
@@ -291,11 +297,11 @@ main div input[type="text"]:hover {
 }
 
 main div input[type="text"]::-webkit-input-placeholder {
-  color: transparent;
+    color: transparent;
 }
 
 main div input[type="text"]:focus::-webkit-input-placeholder {
-  color: white;
+    color: white;
 }
 
 main>button{ 
@@ -364,13 +370,13 @@ header.verhaaldetail>div>div {
     padding-left: 0rem;
 }
 
-main>div:nth-of-type(2)>article>a, main.accountmain>section:nth-last-of-type(-n+1)>div>article>a {
+main>div:nth-of-type(2)>article>a, main.jouwaccount>section:nth-last-of-type(-n+1)>div>article>a {
     display: inline-block;
     width: 100%;
      transition: .5s;
 }
 
-main>div:nth-of-type(2)>article>a:hover, main>div:nth-of-type(2)>article>a:focus, main.accountmain>section:nth-last-of-type(-n+1)>div>article>a:hover, main.accountmain>section:nth-last-of-type(-n+1)>div>article>a:focus  {
+main>div:nth-of-type(2)>article>a:hover, main>div:nth-of-type(2)>article>a:focus, main.jouwaccount>section:nth-last-of-type(-n+1)>div>article>a:hover, main.jouwaccount>section:nth-last-of-type(-n+1)>div>article>a:focus  {
     padding-left: 0.5rem;
 }
 
@@ -464,7 +470,7 @@ main>a:last-of-type{
     margin-top: 2rem;
 }
 
-/* INLOG/ REGISTREREN PAGINA/ FORMULIEREN */
+/* INLOG/ REGISTREREN PAGINA/ EN FORMULIEREN */
 
 main.accountmain>section {
     position: relative;
@@ -656,7 +662,6 @@ form[action="filterandsort"] fieldset>legend, form[action="https://oege.ie.hva.n
     color: #00D66C;
 }
 
-
 form[action="filterandsort"] label, form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label{
     position: relative;
     font-size: 1.2rem;
@@ -677,7 +682,7 @@ form[action="filterandsort"] label>input {
     border-radius: .75rem;
     transition: .2s;
     outline: none;
-     background-position: center;
+    background-position: center;
     background-size: 0rem;
 }
 
@@ -704,27 +709,27 @@ form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"]
     width: 100%;
     border: 0.1rem solid #2D2D2D;
     border-radius: .75rem;
-     padding: 0.5rem;
+    padding: 0.5rem;
     font-family: "Nexa Regular";
     font-size:1rem;
     transition:all .2s;
 }
 
 form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label>input:valid {
-  border-color: #00D66C;
+    border-color: #00D66C;
 } 
 
 form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label>input:invalid {
-  border-color: #ff3268;
-  background-color: rgba(255, 50, 104, 0.10);
+    border-color: #ff3268;
+    background-color: rgba(255, 50, 104, 0.10);
 }
 
 form[action="https://oege.ie.hva.nl/~akerboj001/verhalenwebsite/overzicht.html"] label>input:focus {
-  transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
 }
 
 input[type="email"]::-webkit-input-placeholder {
-  color: #606060
+    color: #606060
 }
 
 main.accountmain form>fieldset>input:last-of-type {
@@ -806,6 +811,8 @@ main.accountmain>img {
     z-index: -1;
 }
 
+/* ACCOUNT */
+
 main.jouwaccount {
     padding: 6rem 1rem 3rem 1rem;
 }
@@ -858,12 +865,11 @@ main.jouwaccount>section:nth-last-of-type(-n+1)>p>a:hover, main.jouwaccount>sect
     color: #5E40B8;
 }
 
-
 /* LEESBUNDELS */
 
 main.leesbundels {
     padding: 0;
-   background-color: #FF3268;
+    background-color: #FF3268;
 }
 
 .leesbundels section {
@@ -979,9 +985,6 @@ main.leesbundels {
     animation-fill-mode: forwards;
 }
 
-leesbundels section>div:nth-of-type(2) {
-}
-
 .leesbundels section>div:nth-of-type(2)::before {
     content: '';
     box-sizing: border-box;
@@ -1047,6 +1050,7 @@ leesbundels section>div:nth-of-type(2) {
     color: #202020;
 }
 
+/* VERHALEN DETAIL */
 
 main.twitter, main.zombie, main.haiku {
     position: relative;
@@ -1461,7 +1465,7 @@ body>section:nth-of-type(2)>div {
 
 body>section:nth-of-type(2)>div>div {
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     margin: 0;
 }
@@ -1469,6 +1473,10 @@ body>section:nth-of-type(2)>div>div {
 body>section:nth-of-type(2) h3 {
     padding-bottom: 1rem;
     text-align: center;
+}
+
+body>section:nth-of-type(2) img {
+    height: 10rem;
 }
 
 body>section:nth-of-type(2) p {
@@ -1499,6 +1507,8 @@ body>section div>a:first-of-type:active, body>section div>a:first-of-type:active
     background-color: #2800a0;
     box-shadow: inset 0 0.1875em 0.0625em #120145;
 }
+
+/* REACTIE SECTIE */
 
 body>section.reacties {
     display: flex;
@@ -1553,6 +1563,9 @@ body>section.reacties>div:nth-of-type(1)>form>textarea {
 }
 
 body>section.reacties>div:nth-of-type(1)>form>input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     margin-top: 0.5rem;
     font-family: "Nexa XBold";
     padding: 1rem 1.25rem 1rem 1.25rem;
@@ -1689,10 +1702,10 @@ body>footer a {
     }
         
     main.accountmain>section>div:nth-of-type(1), main.accountmain>section>div:nth-of-type(3) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: flex-start;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: flex-start;
 }
     
     main.accountmain>section>div {
@@ -1730,7 +1743,7 @@ body>footer a {
 }
     
     .leesbundels section:nth-of-type(2) {
-    padding: 5rem 1rem 0rem 1rem;
+        padding: 5rem 1rem 0rem 1rem;
         background-color: #FF3268;
 }
     main.leesbundels {
@@ -1746,7 +1759,7 @@ body>footer a {
     }
     
     .leesbundels section>div>article:nth-last-of-type(-n+3) {
-    display: block;
+        display: block;
 }
     
     .leesbundels section {
@@ -1769,7 +1782,7 @@ body>footer a {
     
    
     body>section div>div:nth-of-type(2) {
-    display: block;
+        display: block;
 }
     
     main.haiku img, main.twitter img {
@@ -1922,7 +1935,7 @@ body>footer a {
     }
     
     main.accountmain>section>div:nth-of-type(1)>div:nth-of-type(4), main.accountmain>section>div:nth-of-type(3)>div:nth-of-type(3) {
-    display: block;
+        display: block;
 }
     main.accountmain>img {
         display: block;
@@ -1933,7 +1946,7 @@ body>footer a {
     }
     
     .leesbundels section>div>article:nth-last-of-type(-n+6) {
-    display: block;
+        display: block;
 }
     
     .leesbundels section {
@@ -1941,7 +1954,7 @@ body>footer a {
     }
     
     .leesbundels section:nth-of-type(3) {
-    padding: 5rem 1rem 0rem 1rem;
+        padding: 5rem 1rem 0rem 1rem;
         background-color: #FF3268;
 }
     
@@ -1954,9 +1967,8 @@ body>footer a {
         justify-content:space-between;
     }
     
-    
     body>section div>div:nth-of-type(3) {
-    display: block;
+        display: block;
 }
     
     main.twitter>img {
